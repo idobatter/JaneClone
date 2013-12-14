@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>JaneClone: メインページ</title>
+<title>JaneClone: 構造体 PostContent</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -36,8 +36,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>メインページ</span></a></li>
-      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
       <li><a href="files.html"><span>ファイル</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -57,7 +57,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -72,11 +79,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 変数</a> &#124;
+<a href="structPostContent-members.html">すべてのメンバ一覧</a>  </div>
   <div class="headertitle">
-<div class="title">JaneClone ドキュメント</div>  </div>
+<div class="title">構造体 PostContent</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>構造体  
+ <a href="structPostContent.html#details">[詳細]</a></p>
+
+<p><code>#include &lt;<a class="el" href="datatype_8hpp_source.html">datatype.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
+Public 変数</h2></td></tr>
+<tr class="memitem:ae5fad8734b0279443b2e087164448e37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5fad8734b0279443b2e087164448e37"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:a86972154e04b0ad79960e484a0348afa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86972154e04b0ad79960e484a0348afa"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>mail</b></td></tr>
+<tr class="memitem:a5c60a84e8d11dd11120c5032b609fb6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c60a84e8d11dd11120c5032b609fb6c"></a>
+wxString&#160;</td><td class="memItemRight" valign="bottom"><b>kakikomi</b></td></tr>
+</table>
+<a name="details" id="details"></a><h2>説明</h2>
+<div class="textblock"><p>構造体 </p>
+</div><hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li>src/<a class="el" href="datatype_8hpp_source.html">datatype.hpp</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

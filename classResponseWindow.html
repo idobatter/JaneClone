@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>JaneClone: クラス ResponseWindow</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">JaneClone
+   </div>
+   <div id="projectbrief">JaneClone-atextboardsiteviewerfor2ch</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>変数</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="#pub-static-attribs">Static Public 変数</a> &#124;
+<a href="#pro-attribs">Protected 変数</a> &#124;
+<a href="classResponseWindow-members.html">すべてのメンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス ResponseWindow</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>レス書き込み用の子ウィンドウ  
+ <a href="classResponseWindow.html#details">[詳細]</a></p>
+
+<p><code>#include &lt;<a class="el" href="responsewindow_8hpp_source.html">responsewindow.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a2daa8d9d3f7f0d3fedb83a4a9dbadfdf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2daa8d9d3f7f0d3fedb83a4a9dbadfdf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ResponseWindow</b> (wxWindow *parent, wxString &amp;title, <a class="el" href="classURLvsBoardName.html">URLvsBoardName</a> &amp;boardInfoHash, <a class="el" href="classThreadInfo.html">ThreadInfo</a> &amp;threadInfoHash, wxPoint &amp;point, wxTextCtrl *logCtrl)</td></tr>
+<tr class="memitem:aef8863f4c9b7d083995d9ede592564f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef8863f4c9b7d083995d9ede592564f8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddKakikomiText</b> (const wxString &amp;text)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public 変数</h2></td></tr>
+<tr class="memitem:a5d238a0f2f39337e37af0e5c00c2ba36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d238a0f2f39337e37af0e5c00c2ba36"></a>
+static wxString&#160;</td><td class="memItemRight" valign="bottom"><b>threadTitle</b> = wxEmptyString</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected 変数</h2></td></tr>
+<tr class="memitem:aa32175ee89a20d4ac5ee02ab6481f17c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa32175ee89a20d4ac5ee02ab6481f17c"></a>
+wxStaticText *&#160;</td><td class="memItemRight" valign="bottom"><b>boardNameTitle</b></td></tr>
+<tr class="memitem:a01b131b07d9badc301278eb12bbd6f29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01b131b07d9badc301278eb12bbd6f29"></a>
+wxStaticText *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:a2646296a6c64e4e8b0e47512684c0553"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2646296a6c64e4e8b0e47512684c0553"></a>
+wxComboBox *&#160;</td><td class="memItemRight" valign="bottom"><b>nameCombo</b></td></tr>
+<tr class="memitem:a856e82a678ffde29a3d62d46122fa5e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a856e82a678ffde29a3d62d46122fa5e0"></a>
+wxStaticText *&#160;</td><td class="memItemRight" valign="bottom"><b>mail</b></td></tr>
+<tr class="memitem:a4ba7076a444b8280312245f8240be5a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ba7076a444b8280312245f8240be5a5"></a>
+wxComboBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mailCombo</b></td></tr>
+<tr class="memitem:af454d54b3d70b04e78bcdd371ec319b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af454d54b3d70b04e78bcdd371ec319b5"></a>
+wxCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>sageCheck</b></td></tr>
+<tr class="memitem:a8d88e895637e68eb42eddd6b2fe3b95c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d88e895637e68eb42eddd6b2fe3b95c"></a>
+wxTextCtrl *&#160;</td><td class="memItemRight" valign="bottom"><b>kakikoTextCtrl</b></td></tr>
+<tr class="memitem:a587d6b44d40879a132251f0a57047cfd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a587d6b44d40879a132251f0a57047cfd"></a>
+wxPanel *&#160;</td><td class="memItemRight" valign="bottom"><b>resPane</b></td></tr>
+<tr class="memitem:a22046a61e6a0468814726efe5d1ab767"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22046a61e6a0468814726efe5d1ab767"></a>
+wxHtmlWindow *&#160;</td><td class="memItemRight" valign="bottom"><b>previewWindow</b></td></tr>
+<tr class="memitem:a25b6313a34c8161044878d543ec0fec2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25b6313a34c8161044878d543ec0fec2"></a>
+wxPanel *&#160;</td><td class="memItemRight" valign="bottom"><b>previewPane</b></td></tr>
+<tr class="memitem:a48e94e3e1848f3feb10480a673450209"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48e94e3e1848f3feb10480a673450209"></a>
+wxHtmlWindow *&#160;</td><td class="memItemRight" valign="bottom"><b>localRuleWindow</b></td></tr>
+<tr class="memitem:a79c64638d596bef20fe01aaf39973af9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79c64638d596bef20fe01aaf39973af9"></a>
+wxPanel *&#160;</td><td class="memItemRight" valign="bottom"><b>localRulePane</b></td></tr>
+<tr class="memitem:afdc2a47643fe6238a871de2dc743d77d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdc2a47643fe6238a871de2dc743d77d"></a>
+wxTextCtrl *&#160;</td><td class="memItemRight" valign="bottom"><b>settingText</b></td></tr>
+<tr class="memitem:a7badf1b9021f954d5c4c92af868a5d76"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7badf1b9021f954d5c4c92af868a5d76"></a>
+wxPanel *&#160;</td><td class="memItemRight" valign="bottom"><b>settingPane</b></td></tr>
+<tr class="memitem:a82052254b31bc9c10070e67ec9b7aa42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82052254b31bc9c10070e67ec9b7aa42"></a>
+wxNotebook *&#160;</td><td class="memItemRight" valign="bottom"><b>resNoteBook</b></td></tr>
+<tr class="memitem:a66ffdaa88529ce92b1735ce1a1a2c859"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66ffdaa88529ce92b1735ce1a1a2c859"></a>
+wxCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>handleCheck</b></td></tr>
+<tr class="memitem:af95f0cd4b12557d50fcdc55cf74dfa9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af95f0cd4b12557d50fcdc55cf74dfa9b"></a>
+wxCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>frontCheck</b></td></tr>
+<tr class="memitem:ac36d7dd24c9eee02a445eb7677bbe244"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac36d7dd24c9eee02a445eb7677bbe244"></a>
+wxCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>formatCheck</b></td></tr>
+<tr class="memitem:a8faac846a48af57eef0f59fe87e15f46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8faac846a48af57eef0f59fe87e15f46"></a>
+wxCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>beCheck</b></td></tr>
+<tr class="memitem:ae8601eb581b6a8cf1cbd1c91cc97c68f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8601eb581b6a8cf1cbd1c91cc97c68f"></a>
+wxComboBox *&#160;</td><td class="memItemRight" valign="bottom"><b>beMailCombo</b></td></tr>
+<tr class="memitem:ac806ee0506887b777b6f73ce2996db13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac806ee0506887b777b6f73ce2996db13"></a>
+wxCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>proxyCheck</b></td></tr>
+<tr class="memitem:a88a8d0cf69ab49601378b290b5483e80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88a8d0cf69ab49601378b290b5483e80"></a>
+wxComboBox *&#160;</td><td class="memItemRight" valign="bottom"><b>proxyCombo</b></td></tr>
+<tr class="memitem:a139c2db446596892e576313b330cc70e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a139c2db446596892e576313b330cc70e"></a>
+wxPanel *&#160;</td><td class="memItemRight" valign="bottom"><b>space</b></td></tr>
+<tr class="memitem:a7abb8cdf4116800c73d2a687f98b3a64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7abb8cdf4116800c73d2a687f98b3a64"></a>
+wxButton *&#160;</td><td class="memItemRight" valign="bottom"><b>postButton</b></td></tr>
+<tr class="memitem:a4b63f5c10e10a4284ee15d59097b9bf0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b63f5c10e10a4284ee15d59097b9bf0"></a>
+wxButton *&#160;</td><td class="memItemRight" valign="bottom"><b>quitButton</b></td></tr>
+</table>
+<a name="details" id="details"></a><h2>説明</h2>
+<div class="textblock"><p>レス書き込み用の子ウィンドウ </p>
+<p>書き込みの流れ</p>
+<ol type="1">
+<li>COOKIEファイルがあるかどうか確認する(start)</li>
+</ol>
+<p>・確認する要素 ・COOKIE (日付等) ・HIDDEN (隠し要素１) ・PREN (隠し要素２)</p>
+<p>・システム上あり得る状態(これ以外の状態はイレギュラー) (a). 全てない (2)へ (b). COOKIEとHIDDENのみある (3)へ (c). COOKIE, HIDDEN, PRENすべてある (4)へ</p>
+<ol type="1">
+<li>初回書き込み用電文を投げてCOOKIEとHIDDENをもらう (1)へ</li>
+</ol>
+<ol type="1">
+<li>書き込み同意画面にて「同意する」をクリックして書き込み成功, PRENをもらう(end)</li>
+</ol>
+<ol type="1">
+<li>COOKIE, HIDDEN, PRENを添えて書き込み成功(end) </li>
+</ol>
+</div><hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li>src/<a class="el" href="responsewindow_8hpp_source.html">responsewindow.hpp</a></li>
+<li>src/responsewindow.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+JaneCloneに対してSat Dec 14 2013 10:56:58に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

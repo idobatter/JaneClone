@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>JaneClone: src/enums.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">JaneClone
+   </div>
+   <div id="projectbrief">JaneClone-atextboardsiteviewerfor2ch</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>変数</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">enums.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifndef ENUMS_HPP_</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENUMS_HPP_</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;enumstring.hpp&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// テーブル要素</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define X_TABLE_ITEM(x) X(x, STR(x))</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// 使いたい列挙型を定義する.バックスラッシュの後ろに文字があるとコンパイルエラーになるので注意</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define X_TABLE \</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_Restart)                        </span><span class="comment">/* 再起動                                            　　　　*/</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_Test)                           </span><span class="comment">/* テスト用                                         　　　　*/</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_Logging)                        </span><span class="comment">/* ログ出力制御用                                                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_WindowMinimize)                 </span><span class="comment">/* ウィンドウを最小化する                                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_GetBoardList)                   </span><span class="comment">/* 板一覧情報取得                                                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CheckLogDirectory)              </span><span class="comment">/* 保存されているログをスレッド一覧に表示する                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_GetVersionInfo)                 </span><span class="comment">/* バージョン情報                                                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadNoteBook)                 </span><span class="comment">/* スレッド一覧ノートブックに使うID                              */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BoardNoteBook)                  </span><span class="comment">/* 板一覧用ノートブックに使うID                                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThumbnailNoteBook)              </span><span class="comment">/* 画像ビューア用ID                                              */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BoardTreectrl)                  </span><span class="comment">/* 板一覧ツリー用ID                                              */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ShingetsuBoardTreectrl)         </span><span class="comment">/* 新月公開ノード一覧ツリー用ID                                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BoardTreeNoteBook)              </span><span class="comment">/* 板一覧ツリーを載せるノートブックに使うID                  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OneBoardTabClose)               </span><span class="comment">/* スレッド一覧タブをひとつ閉じる                                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ExcepSelTabClose)               </span><span class="comment">/* 現在選択されていないスレッド一覧タブを閉じる                   */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllBoardTabClose)               </span><span class="comment">/* すべてのスレッド一覧タブを閉じる                             */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllLeftBoardTabClose)           </span><span class="comment">/* これより左のスレッド一覧タブをを閉じる                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllRightBoardTabClose)          </span><span class="comment">/* これより右のスレッド一覧タブを閉じる                               */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnOpenBoardByBrowser)           </span><span class="comment">/* スレッド一覧をブラウザで開く                                   */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ReloadOneBoard)                 </span><span class="comment">/* アクティブなスレッド一覧をひとつ更新する                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ReloadAllBoard)                 </span><span class="comment">/* すべてのタブのスレッド一覧を更新する　　　                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CopyBURLToClipBoard)            </span><span class="comment">/* 板のURLをクリップボードにコピーする                          */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CopyBTitleToClipBoard)          </span><span class="comment">/* 板のタイトルをクリップボードにコピーする                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CopyBBothDataToClipBoard)       </span><span class="comment">/* 板のURLとタイトルをクリップボードにコピーする           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DeleteBSelectedDatFile)         </span><span class="comment">/* 選択中のログを削除                                           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DeleteBAllDatFile)              </span><span class="comment">/* すべてのログを削除                                           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DeleteBAllDatFileWithoutFav)    </span><span class="comment">/* お気に入り以外のログを削除                                   */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CopyTURLToClipBoard)            </span><span class="comment">/* スレッドのURLをクリップボードにコピーする                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CopyTTitleToClipBoard)          </span><span class="comment">/* スレッドのタイトルをクリップボードにコピーする                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CopyTBothDataToClipBoard)       </span><span class="comment">/* スレッドのURLとタイトルをクリップボードにコピーする          */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CopyTContentsToClipBoard)       </span><span class="comment">/* スレッドの内容をクリップボードにコピーする                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CopyTAllToClipBoard)            </span><span class="comment">/* スレッドの内容, URL, タイトルをクリップボードにコピーする   */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OneThreadTabClose)              </span><span class="comment">/* スレタブをひとつ閉じる                                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ExcepSelThreadTabClose)         </span><span class="comment">/* 現在選択されていないスレタブを閉じる                               */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllThreadTabClose)              </span><span class="comment">/* すべてのスレタブを閉じる                                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllLeftThreadTabClose)          </span><span class="comment">/* これより左のスレタブをを閉じる                                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllRightThreadTabClose)         </span><span class="comment">/* これより右のスレタブを閉じる                                   */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnOpenThreadByBrowser)          </span><span class="comment">/* スレッドをブラウザで開く                                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SaveDatFile)                    </span><span class="comment">/* datファイルに名前を付けて保存                           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SaveDatFileToClipBoard)         </span><span class="comment">/* datをクリップボードにコピー                                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DeleteDatFile)                  </span><span class="comment">/* このログを削除                                                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ReloadThisThread)               </span><span class="comment">/* スレッドの再読み込み                                               */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CallResponseWindow)             </span><span class="comment">/* 書き込み用のウィンドウを呼び出す                             */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BoardListCtrl)                  </span><span class="comment">/* 板一覧リスト自体を表すID                                  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ShingetsuBoardListCtrl)         </span><span class="comment">/* 新月の板一覧リスト自体を表すID                         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_FontDialogBoardTree)            </span><span class="comment">/* 板一覧ツリー部分のフォントの指定を行う                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_FontDialogLogWindow)            </span><span class="comment">/* ログ出力画面部分のフォントの指定を行う                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_FontDialogBoardNotebook)        </span><span class="comment">/* スレッド一覧部分のフォントの指定を行う                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_FontDialogThreadNotebook)       </span><span class="comment">/* スレッド画面部分のフォント設定を呼び出                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_FontDialogThreadContents)       </span><span class="comment">/* スレッド内で使用するフォント設定を呼び                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_URLWindowButton)                </span><span class="comment">/* URL入力ウィンドウのボタンを表すID                              */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_UserLastClosedThreadMenuUp)     </span><span class="comment">/* ユーザーが最後に閉じたスレッドの情報を                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_UserLastClosedBoardMenuUp)      </span><span class="comment">/* ユーザーが最後に閉じた板の情報を項目に                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_UserLookingTabsMenuUp)          </span><span class="comment">/* ユーザーが現在見ているスレタブ・板タブ                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_JaneCloneMgrUpdate)             </span><span class="comment">/* Auiマネージャーの更新を行う                                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_UserLookingTabsControl)         </span><span class="comment">/* ユーザーが現在フォーカスしているウィン                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_MoveNextTab)                    </span><span class="comment">/* 表示しているタブを移動する(次)                         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_MovePrevTab)                    </span><span class="comment">/* 表示しているタブを移動する(前)                         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_UserLookingTabsMenuClick)       </span><span class="comment">/* ユーザーが現在見ているスレタブ・板タブ                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnOpenJaneCloneOfficial)        </span><span class="comment">/* JaneClone公式サイトをブラウザで開く                             */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnOpen2chViewerOfficial)        </span><span class="comment">/* ●公式サイトをブラウザで開く                                   */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadContentSearchBar)         </span><span class="comment">/* スレッド内容バーの検索ボックスのID                           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadSearchBar)                </span><span class="comment">/* スレッド検索ボックスのID                                  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BoardSearchBar)                 </span><span class="comment">/* 板名検索ボックスのID                                                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ShingetsuBoardSearchBar)        </span><span class="comment">/* 新月の板名検索ボックスのID                                       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadSearchBarCombo)           </span><span class="comment">/* スレッド検索ボックスのコンボボックス                               */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BoardSearchBarCombo)            </span><span class="comment">/* 板名検索ボックスのコンボボックス                             */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadSearchBoxDoSearch)        </span><span class="comment">/* 検索ボックス(スレッド一覧)で検索ボタンを押す                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BoardSearchBoxDoSearch)         </span><span class="comment">/* 検索ボックス(板一覧)で検索ボタンを押す                     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchBoxUp)                    </span><span class="comment">/* 検索ボックスで上に移動                                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchBoxDown)                  </span><span class="comment">/* 検索ボックスで下に移動                                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchBoxCopy)                  </span><span class="comment">/* 検索ボックスでコピー実行                                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchBoxCut)                   </span><span class="comment">/* 検索ボックスで切り取り実行                                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchBoxSelectAll)             </span><span class="comment">/* 検索ボックスで全て選択                                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchBoxClear)                 </span><span class="comment">/* 検索ボックスをクリア                                               */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchBoxNormalSearch)          </span><span class="comment">/* 検索ボックスで通常検索                                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchBoxRegexSearch)           </span><span class="comment">/* 検索ボックスで正規表現検索                                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchBarHide)                  </span><span class="comment">/* 検索ボックスを隠す                                          */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_FloatToolBar)                   </span><span class="comment">/* アイコン付きのツールバー自体のID                              */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SwitchSeparateXY)               </span><span class="comment">/* 縦⇔横分割切り替え                                          */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SwitchTwoThreePane)             </span><span class="comment">/* ２⇔３ペイン切り替え                                               */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ShowBoardListTree)              </span><span class="comment">/* 板一覧ツリー表示切り替え                                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SwitchRightPane)                </span><span class="comment">/* 右側ペインの内容切り替え                                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CallSettingWindow)              </span><span class="comment">/* ビューア設定画面を呼び出す                                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ResponseWindow)                 </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_QuitResponseWindow)             </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_PostResponse)                   </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_PostConfirmForm)                </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBAutoReload)                  </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBRedResExtract)               </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBRefresh)                     </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBScrollToNewRes)              </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBStop)                        </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBResExtract)                  </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBNewThread)                   </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBBookMark)                    </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBDeleteLog)                   </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBClose)                       </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBNormalSearch)                </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBHideSearchBar)               </span><span class="comment">/* スレッド内容バーの内容を隠す                                  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBForward)                     </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TCBBackward)                    </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadContentBarUpdate)         </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CopyFromHtmlWindow)             </span><span class="comment">/* HtmlWindowで選択しているテキストをクリップボードにコピーする  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CopyURLFromHtmlWindow)          </span><span class="comment">/* HtmlWindowで選択しているURLをクリップボードにコピーする  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SelectAllTextHtmlWindow)        </span><span class="comment">/* HtmlWindowでテキストを全て選択する                                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchSelectWordByYahoo)        </span><span class="comment">/* 選択したテキストでヤフー検索                                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchSelectWordByGoogle)       </span><span class="comment">/* 選択したテキストでGoogle検索                                       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchSelectWordByAmazon)       </span><span class="comment">/* 選択したテキストでAmazon検索                                       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SearchThreadBySelectWord)       </span><span class="comment">/* 選択したテキストでスレタイ検索                                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CallResponseWindowAnchor)       </span><span class="comment">/* 書き込み用のウィンドウをアンカー付きで呼び出す                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CallResponseWindowQuote)        </span><span class="comment">/* 書き込み用のウィンドウをレス引用付きで呼び出す                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_HtmlSourceDebug)                </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ImagePanel)                     </span><span class="comment">/* 画像パネル                                                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OneThumbnailTabClose)           </span><span class="comment">/* 画像タブをひとつ閉じる                                     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllThumbnailTabClose)           </span><span class="comment">/* すべての画像タブを閉じる                                  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SaveAsImages)                   </span><span class="comment">/* 名前をつけて保存                                              */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllLeftThumbnailTabClose)       </span><span class="comment">/* これより左の画像タブをを閉じる                                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllRightThumbnailTabClose)      </span><span class="comment">/* これより右の画像タブを閉じる                                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SelectLeftThumbnailTab)         </span><span class="comment">/* 左の画像タブに移動                                           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SelectRightThumbnailTab)        </span><span class="comment">/* 右の画像タブに移動                                           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnOpenImageByBrowser)           </span><span class="comment">/* 画像をブラウザで開く                                                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CopyImageURLToClipBoard)        </span><span class="comment">/* 画像URLをクリップボードにコピーする                           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_Rotate90AntiClockwise)          </span><span class="comment">/* 画像を90度左回転させる                                        */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_Rotate90Clockwise)              </span><span class="comment">/* 画像を90度右回転させる                                        */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ZoomIn)                         </span><span class="comment">/* 画像を拡大する                                                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ZoomOut)                        </span><span class="comment">/* 画像を縮小する                                                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ResetImageOriginalSize)         </span><span class="comment">/* 画像のサイズを元に戻す                                        */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_HideThumbnailTab)               </span><span class="comment">/* 画像ビューアを隠す                                           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_CHK)             </span><span class="comment">/* 新着チェック */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_NUM)             </span><span class="comment">/* 番号               */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_TITLE)           </span><span class="comment">/* タイトル     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_RESP)            </span><span class="comment">/* レス               */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_CACHEDRES)       </span><span class="comment">/* 取得               */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_NEWRESP)         </span><span class="comment">/* 新着               */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_INCRESP)         </span><span class="comment">/* 増レス       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_MOMENTUM)        </span><span class="comment">/* 勢い               */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_LASTUP)          </span><span class="comment">/* 最終取得     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_SINCE)           </span><span class="comment">/* SINCE        */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_OID)             </span><span class="comment">/* 固有番号     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnClickMenuCOL_BOARDNAME)       </span><span class="comment">/* 板          */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnCancelSetting)                </span><span class="comment">/* 設定画面をキャンセル             */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnOkSetting)                    </span><span class="comment">/* 設定画面をOkで終了         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SettingPanelTree)               </span><span class="comment">/* 設定画面の描画を切り替える */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SettingPanelUpdate)             </span><span class="comment">/* 設定画面の更新をメインスレッドに伝える         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanelUpdate)             </span><span class="comment">/* ネットワーク設定画面の更新をメインスレッドに伝える*/</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanel)                   </span><span class="comment">/* ネットワーク設定用画面              */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanelUseProxy)           </span><span class="comment">/* プロキシを使用するかどうか                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanelUseProxyCache)      </span><span class="comment">/* プロキシでキャッシュを使用するかどうか */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanelBasicAuthUserName)  </span><span class="comment">/* ベーシック認証のユーザー名                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanelBasicAuthPassword)  </span><span class="comment">/* ベーシック認証のパスワード                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanelProxyReceiveAddr)   </span><span class="comment">/* Proxy受信用アドレス                     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanelProxyReceivePort)   </span><span class="comment">/* Proxy受信用ポート                        */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanelProxySendAddr)      </span><span class="comment">/* Proxy送信用アドレス                     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanelProxySendPort)      </span><span class="comment">/* Proxy送信用ポート                        */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanelProxySSLAuthAddr)   </span><span class="comment">/* Proxy SSL認証用アドレス                 */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NetworkPanelProxySSLAuthPort)   </span><span class="comment">/* Proxy SSL認証用ポート            */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_PathSettingPanel)               </span><span class="comment">/* 各種パス設定用画面                                  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BrowserCheck)                   </span><span class="comment">/* 使用するブラウザを指定するかどうか                  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BrowserPathTC)                  </span><span class="comment">/* ブラウザのパスをもつテキストコントロール         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DirPickerBrowser)               </span><span class="comment">/* ブラウザのパスを参照する                         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BoardListTC)                    </span><span class="comment">/* 板一覧リストを保持する場所をもつテキストコントロール */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DirPickerBoardList)             </span><span class="comment">/* 板一覧リストのパスを参照する                           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_SkinPathTC)                     </span><span class="comment">/* スキン用のファイルのパスをもつテキストコントロール  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DirPickerSkin)                  </span><span class="comment">/* スキン用ファイルのパスを参照する                     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ClearBrowserPath)               </span><span class="comment">/* ブラウザパス設定値を削除                         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ClearBoardListPath)             </span><span class="comment">/* 板一覧リストのパス設定値を削除                        */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ClearSkinPath)                  </span><span class="comment">/* スキンのパス設定値を削除                         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BehaviorPanel)                  </span><span class="comment">/* 動作設定用パネル                                     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OpenBNewTabCheck)               </span><span class="comment">/* 新しいタブで板を開く                                       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OnlyOneCategoryCheck)           </span><span class="comment">/* カテゴリを一つしか開かない                              */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OpenTNewTabCheck)               </span><span class="comment">/* 新しいタブでスレを開く                            */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadNewTabCombo)              </span><span class="comment">/* 新しいタブでスレを開く                            */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_LastReadThreadPosCheck)         </span><span class="comment">/* 最後に見たスレの位置にジャンプ                        */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadJumpSetting)              </span><span class="comment">/* 最後に見たスレの位置にジャンプ                        */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_RedrawNewThreadCheck)           </span><span class="comment">/* 新着チェック時に既得レスを描き直す                  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ShowResponseCombo)              </span><span class="comment">/* 既得スレの表示レス数                                       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_FavoriteNewTabCheck)            </span><span class="comment">/* お気に入りを新しいタブで開く                           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_FavoriteOnlyOneFolder)          </span><span class="comment">/* お気に入りフォルダを一つしか開かない                       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ColorFontSettingPanel)          </span><span class="comment">/* 色・フォント設定用画面          */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TreeSampleLabel)                </span><span class="comment">/* ツリーサンプル                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadListSampleLabel)          </span><span class="comment">/* スレ欄サンプル                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ExtractSampleLabel)             </span><span class="comment">/* 抽出サンプル                         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_LogWindowSampleLabel)           </span><span class="comment">/* ログ出力画面サンプル                     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadTitleSampleLabel)         </span><span class="comment">/* スレッドタイトルサンプル       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadViewSampleLabel)          </span><span class="comment">/* スレビューサンプル                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_KakikoSampleLabel)              </span><span class="comment">/* 書き込みサンプル                   */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_MemoSampleLabel)                </span><span class="comment">/* メモ欄サンプル                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_HintSampleLabel)                </span><span class="comment">/* ヒントサンプル                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_LinkSampleLabel)                </span><span class="comment">/* リンクサンプル                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OthersSampleLabel)              </span><span class="comment">/* その他サンプル                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllSampleLabel)                 </span><span class="comment">/* ツリーフォント設定ボタン       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TreeFontButton)                 </span><span class="comment">/* スレ欄フォント設定ボタン       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadListFontButton)           </span><span class="comment">/* 抽出フォント設定ボタン          */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ExtractFontButton)              </span><span class="comment">/* ログ出力画面フォント設定ボタン     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_LogWindowFontButton)            </span><span class="comment">/* スレッドタイトルフォント設定ボタン */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadTitleFontButton)          </span><span class="comment">/* 書き込みフォント設定ボタン            */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_KakikoFontButton)               </span><span class="comment">/* メモ欄フォント設定ボタン       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_MemoFontButton)                 </span><span class="comment">/* ヒントフォント設定ボタン       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_HintFontButton)                 </span><span class="comment">/* リンクフォント設定ボタン       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_LinkFontButton)                 </span><span class="comment">/* その他フォント設定ボタン       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_OthersFontButton)               </span><span class="comment">/* すべてフォント設定ボタン       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllFontButton)                  </span><span class="comment">/* スレ欄背景色設定ボタン          */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BoardListBGColorButton)         </span><span class="comment">/* 抽出背景色設定ボタン                     */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadListBGColorButton)        </span><span class="comment">/* ログ出力画面背景色設定ボタン         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_LogWindowBGColorButton)         </span><span class="comment">/* スレッドタイトル背景色設定ボタン   */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadTitleBGColorButton)       </span><span class="comment">/* スレビュー背景色設定ボタン            */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadViewBGColorButton)        </span><span class="comment">/* メモ欄背景色設定ボタン          */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_MemoBGColorButton)              </span><span class="comment">/* ヒント背景色設定ボタン          */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_HintBGColorButton)              </span><span class="comment">/* ポップアップ背景色設定ボタン         */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_PopupBGColorButton)             </span><span class="comment">/* すべての背景色設定ボタン       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AllBGColorButton)               </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_UserSettingPanel)               </span><span class="comment">/* */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_MaruUserID)                     \</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_MaruUserPassword)                       \</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_MaruAutoLoginCheck)                     \</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_MaruLogoutButton)                       \</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BEMailAddress)                  \</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BEPassword)             \</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TabColorSettingPanel)           \</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadTabColorCheck)            \</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ActiveTabBGColorButton)                 \</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DefaultActiveTabSampleLabel)            \</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ReadingActiveTabSampleLabel)            \</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BrokenActiveTabSampleLabel)             \</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CannotPostActiveTabSampleLabel)                 \</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_UpdateActiveTabSampleLabel)             \</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_PartialContentActiveTabSampleLabel)             \</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DeactiveTabBGColorButton)               \</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DefaultDeactiveTabSampleLabel)          \</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ReadingDeactiveTabSampleLabel)          \</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_BrokenDeactiveTabSampleLabel)           \</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CannotPostDeactiveTabSampleLabel)               \</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_UpdateDeactiveTabSampleLabel)           \</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_PartialContentDeactiveTabSampleLabel)           \</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadTabDefaultFontColorButton)                \</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadTabReadingFontColorButton)                \</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadTabBrokenFontColorButton)                 \</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadTabCannotPostFontColorButton)             \</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadTabUpdateFontColorButton)                 \</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ThreadTabPartialContentFontColorButton)                 \</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AutoReloadSampleLabel)          \</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AutoReloadFontColorButton)              \</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TabControlSettingPanel) \</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TabControlSettingPanelOpenTabChoice) \</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TabControlSettingPanelOpenTabFromOtherTabChoice) \</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TabControlSettingPanelCloseThreadViewTabChoice) \</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_TabControlSettingPanelCloseThreadTabChoice) \</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AddThreadFavorite)                </span><span class="comment">/* お気に入りに追加(スレッド)             */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DelThreadFavorite)                </span><span class="comment">/* お気に入りを削除(スレッド)             */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AddBoardFavorite)                 </span><span class="comment">/* お気に入りに追加(板)                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_DelBoardFavorite)                 </span><span class="comment">/* お気に入りを削除(板)                      */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_AddAllThreadFavorite)             </span><span class="comment">/* すべてのタブをお気に入りに追加              */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ResponseWindowSageChk)            </span><span class="comment">/* レス用ウィンドウのsageチェック                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ResponseWindowBeChk)              </span><span class="comment">/* レス用ウィンドウのBEチェック          */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ChangeUserLastAttached)           </span><span class="comment">/* ユーザーが最後に触ったウィジェットを記録       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_ReloadThreadByName)               </span><span class="comment">/* スレッド名を元にスレッドを更新する        */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_NewBoardAddDialog)                </span><span class="comment">/* 外部板登録ダイアログ                       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_CallNewBoardAddDialog)            </span><span class="comment">/* 外部板登録用ダイアログを呼び出す           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">X_TABLE_ITEM(ID_JaneCloneEnumsEnd)</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">// 列挙型の実体をマクロで生成する</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="keyword">enum</span> JANECLONE_ENUMS {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;     ID_Quit = 1,</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">     #define X(Enum, String) Enum,</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor"></span>     X_TABLE</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="preprocessor">     #undef X</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor"></span>     ID_UserLastClosedThreadClick = 1000,  <span class="comment">// ユーザーが最後に閉じたスレッドの情報をクリックした(動的なIDのため1000~)</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;     ID_UserLastClosedBoardClick  = 1100,  <span class="comment">// ユーザーが最後に閉じた板の情報をクリックした(動的なIDのため1100~)     </span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;     ID_UserFavoriteThreadClick   = 1200,  <span class="comment">// ユーザーがお気に入りに登録したスレッドの情報をクリックした(動的なIDのため1200~)</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;     ID_ThreadContentBar  = 1500           <span class="comment">// ThreadContentBar自体のID(動的なIDのため1500~)</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;};</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment">// 列挙型を文字列化</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;Begin_Enum_String( JANECLONE_ENUMS )</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;{</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">#define X(Enum, String)  \</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">     Enum_String( Enum ) \</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor"></span>     X_TABLE</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor">#undef X</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;End_Enum_String;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ENUMS_HPP_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+JaneCloneに対してSat Dec 14 2013 10:56:57に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

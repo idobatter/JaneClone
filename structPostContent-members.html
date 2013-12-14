@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>JaneClone: メインページ</title>
+<title>JaneClone: メンバ一覧</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -36,8 +36,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>メインページ</span></a></li>
-      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
       <li><a href="files.html"><span>ファイル</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -57,7 +57,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -72,12 +79,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">JaneClone ドキュメント</div>  </div>
+<div class="title">PostContent メンバ一覧</div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+
+<p>これは全メンバの一覧です。<a class="el" href="structPostContent.html">PostContent</a>継承メンバも含んでいます。</p>
+<table class="directory">
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>kakikomi</b> (次で定義されています。 <a class="el" href="structPostContent.html">PostContent</a>)</td><td class="entry"><a class="el" href="structPostContent.html">PostContent</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>mail</b> (次で定義されています。 <a class="el" href="structPostContent.html">PostContent</a>)</td><td class="entry"><a class="el" href="structPostContent.html">PostContent</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>name</b> (次で定義されています。 <a class="el" href="structPostContent.html">PostContent</a>)</td><td class="entry"><a class="el" href="structPostContent.html">PostContent</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 JaneCloneに対してSat Dec 14 2013 10:56:58に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">

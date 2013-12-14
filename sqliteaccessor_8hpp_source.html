@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>JaneClone: src/sqliteaccessor.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">JaneClone
+   </div>
+   <div id="projectbrief">JaneClone-atextboardsiteviewerfor2ch</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>全て</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>クラス</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>関数</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>変数</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">sqliteaccessor.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* JaneClone - a text board site viewer for 2ch</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2012 Hiroyuki Nagata</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * as published by the Free Software Foundation; either version 2</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * of the License, or (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * along with this program; if not, write to the Free Software</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * Contributor:</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *      Hiroyuki Nagata &lt;newserver002@gmail.com&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifndef SQLITEACCESSOR_HPP_</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SQLITEACCESSOR_HPP_</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;wx/wx.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;wx/dir.h&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;wx/file.h&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;wx/datetime.h&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;wx/wxsqlite3.h&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;enums.hpp&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;datatype.hpp&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// SQLiteのデータベースファイルのパス</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#ifdef __WXMSW__</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor"></span><span class="keyword">static</span> <span class="keyword">const</span> wxString SQLITE_FILE_PATH = wxT(<span class="stringliteral">&quot;\\janeclone.db&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor"></span><span class="keyword">static</span> <span class="keyword">const</span> wxString SQLITE_FILE_PATH = wxT(<span class="stringliteral">&quot;/janeclone.db&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// SQL処理</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define INITIALIZE_JC_WXSQLITE3(db, now)    \</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">     try {                                  \</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">     wxString dbFile = GetDBFilePath();     \</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">     wxSQLite3Database::InitializeSQLite(); \</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">     db.Open(dbFile);                       \</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">     db.Begin();                            \</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CLOSE_CONN_JC_WXSQLITE3(db) \</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">     db.Commit(); \</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">     db.Close();  \</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">     } catch (wxSQLite3Exception&amp; e) {  \</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">          wxMessageBox(e.GetMessage()); \</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">     }                                  \</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CLOSE_CONNONLY_JC_WXSQLITE3(db) \</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">     db.Close();  \</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">     } catch (wxSQLite3Exception&amp; e) {  \</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">          wxMessageBox(e.GetMessage()); \</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">     }                                  \</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="classSQLiteAccessor.html">   64</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSQLiteAccessor.html">SQLiteAccessor</a> {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;     <a class="code" href="classSQLiteAccessor.html#a3c75922b0589742b04ea1b52d30f0b4b" title="SQLiteデータベースの初期化・トランザクションあり">SQLiteAccessor</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#a7bfa27bc0862f4f00d612215a15913ae" title="板一覧情報のコミットを行う">SetBoardInfoCommit</a>(wxArrayString* boardInfoArray);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;     <span class="keyword">static</span> wxArrayString <a class="code" href="classSQLiteAccessor.html#af8bfa0f07dbd0d5a518822d8a300b5e4" title="板一覧情報をSQLite内のテーブルから取得しArrayStringの形で返す">GetBoardInfo</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;     <span class="keyword">static</span> wxArrayString <a class="code" href="classSQLiteAccessor.html#a38968bd53ce570c8da9dfaf7e9416106" title="板一覧情報(カテゴリ一覧)をSQLite内のテーブルから取得しArrayStringの形で返す">GetCategoryList</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#acec020f323615592162d42aa4b29017b" title="ユーザーがJaneClone終了時にタブで開いていた板の名前を登録する">SetUserLookingBoardList</a>(wxArrayString&amp; userLookingBoardListArray);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;     <span class="keyword">static</span> wxArrayString <a class="code" href="classSQLiteAccessor.html#a43e1fbd5bdadaa3ebce52040ca7cff49" title="JaneClone開始時に以前ユーザーがタブで開いていた板の名前を取得する">GetUserLookedBoardList</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#a5d8a6de8029b2227653664185fd1279a" title="ユーザーがJaneClone終了時にタブで開いていたスレッドの情報を登録する">SetUserLookingThreadList</a>(wxArrayString&amp; userLookingThreadListArray);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;     <span class="keyword">static</span> wxArrayString <a class="code" href="classSQLiteAccessor.html#a77b507063a9be952f019dbdf052cfb84" title="JaneClone開始時に以前ユーザーがタブで開いていたスレッドの情報を取得する">GetUserLookedThreadList</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#a68ca9007003b1e6a1603321147cd96c4" title="ユーザーがスレッドの情報をお気に入りに登録する">SetUserFavoriteThreadList</a>(wxArrayString&amp; userFavoriteThreadListArray);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#a6806d48d39c6d506b5958cacff2a60c2" title="ユーザーがお気に入りに登録しているスレッドの情報を取得する">GetUserFavoriteThreadList</a>(std::vector&lt;std::tuple&lt;wxString, wxString, wxString&gt;&gt;&amp; favoriteList);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#a2f18cee1479fbfc1c9307fe11ee5c20b" title="スレタブの情報をSQLiteに格納する">SetThreadInfo</a>(<a class="code" href="classThreadInfo.html">ThreadInfo</a>* t, <span class="keyword">const</span> wxWindowID <span class="keywordtype">id</span> = wxID_ANY);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;     <span class="keyword">static</span> wxArrayString <a class="code" href="classSQLiteAccessor.html#a66f1ad289451ef191ad571ae3d80ee97" title="最近閉じたスレッドタブ名を取得する">GetThreadInfo</a>(<span class="keyword">const</span> wxWindowID <span class="keywordtype">id</span> = wxID_ANY);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#a0eeae0a100c3793b451d26021499b345" title="スレッドタブ情報を取得する">GetThreadFullInfo</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> number, <a class="code" href="classThreadInfo.html">ThreadInfo</a>* threadInfo, <span class="keyword">const</span> wxWindowID <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#a1645d3719670a416e6b95282f9985ccf" title="板タブを閉じた際に情報をSQLiteに格納する">SetClosedBoardInfo</a>(<a class="code" href="classURLvsBoardName.html" title="クラス">URLvsBoardName</a>* hash);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;     <span class="keyword">static</span> wxArrayString <a class="code" href="classSQLiteAccessor.html#aeefc59c135194621172da42b3f398b53" title="最近閉じた板タブ名リストを取得する">GetClosedBoardInfo</a>();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classSQLiteAccessor.html#a161aae9bc6aff1f040bdc8ed1feb2741" title="指定されたテーブルに情報が存在するかどうかを調べるメソッド">TableHasData</a>(<span class="keyword">const</span> wxString);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classSQLiteAccessor.html#af83f5e7a351c77f1cd1091d122ae5d7f" title="指定されたテーブルにレコードが何件が存在するかどうかを調べるメソッド">HowManyRecord</a>(<span class="keyword">const</span> wxString);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#ada2e0a7665c14aa9f2db944950a44339" title="指定されたテーブルを削除する">DropTable</a>(<span class="keyword">const</span> wxString);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#abc01cdf961e32adb3a76f288ef5ac60d" title="指定されたテーブルのデータを削除する">DeleteTableData</a>(<span class="keyword">const</span> wxString);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#a2fee7392f437504a60cea9a68772341d" title="ユーザーが検索ボックスで検索したキーワードをSQLiteに格納する">SetUserSearchedKeyword</a>(<span class="keyword">const</span> wxString&amp; keyword, <span class="keyword">const</span> wxWindowID <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;     <span class="keyword">static</span> wxArrayString <a class="code" href="classSQLiteAccessor.html#abf26e203ab96c1d726199a00f10b5f88" title="ユーザーが検索ボックスで検索したキーワードを取得する">GetUserSearchedKeyword</a>(<span class="keyword">const</span> wxWindowID <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;     <span class="keyword">static</span> wxArrayString <a class="code" href="classSQLiteAccessor.html#ab3b510a503a9efcb36750e44df754fe9" title="登録済みの新月の公開ノード一覧を取得する">GetShingetsuNodeList</a>();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#add6cbabed9e0b827ad0c6c59ff4ae51b" title="新月の公開ノードを登録する">SetShingetsuNode</a>(<span class="keyword">const</span> wxString&amp; nodeURL);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#a04d920fdbbf1f3f1b583569619c07fb4" title="ダウンロードした画像のファイル名とUUIDをデータベースに格納する">SetImageFileName</a>(std::vector&lt;ImageFileInfo&gt;&amp; imageFileInfoArray);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classSQLiteAccessor.html#a04d920fdbbf1f3f1b583569619c07fb4" title="ダウンロードした画像のファイル名とUUIDをデータベースに格納する">SetImageFileName</a>(<a class="code" href="structImageFileInfo.html">ImageFileInfo</a>&amp; imageFileInfo);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classSQLiteAccessor.html#a8371bdae23da41b73d94d720f3a3ed9b" title="画像のファイル名とUUIDのリストをデータベースから取得する">GetImageFileName</a>(<span class="keyword">const</span> wxArrayString&amp; fileNameArray, std::vector&lt;ImageFileInfo&gt;&amp; imageFileInfoArray);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;     <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classSQLiteAccessor.html#a8371bdae23da41b73d94d720f3a3ed9b" title="画像のファイル名とUUIDのリストをデータベースから取得する">GetImageFileName</a>(<span class="keyword">const</span> wxString&amp; fileName, <a class="code" href="structImageFileInfo.html">ImageFileInfo</a>&amp; imageFileInfo);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;     <span class="keyword">static</span> wxString GetDBFilePath();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;     wxArrayString* boardInfoArray;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;};</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SQLITEACCESSOR_HPP_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+JaneCloneに対してSat Dec 14 2013 10:56:57に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

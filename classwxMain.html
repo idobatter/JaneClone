@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>JaneClone: メインページ</title>
+<title>JaneClone: クラス wxMain</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -36,8 +36,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>メインページ</span></a></li>
-      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
       <li><a href="files.html"><span>ファイル</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -57,7 +57,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -72,11 +79,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public メソッド</a> &#124;
+<a href="classwxMain-members.html">すべてのメンバ一覧</a>  </div>
   <div class="headertitle">
-<div class="title">JaneClone ドキュメント</div>  </div>
+<div class="title">クラス wxMain</div>  </div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a61bcd77f22a88c7bcb551dd159a34953"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61bcd77f22a88c7bcb551dd159a34953"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwxMain.html#a61bcd77f22a88c7bcb551dd159a34953">OnInit</a> ()</td></tr>
+<tr class="memdesc:a61bcd77f22a88c7bcb551dd159a34953"><td class="mdescLeft">&#160;</td><td class="mdescRight">wxMainの実装 <br/></td></tr>
+<tr class="memitem:ab5407c897075f397dfee8ddabc3c072f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5407c897075f397dfee8ddabc3c072f"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwxMain.html#ab5407c897075f397dfee8ddabc3c072f">OnExit</a> ()</td></tr>
+<tr class="memdesc:ab5407c897075f397dfee8ddabc3c072f"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了後の後始末 <br/></td></tr>
+</table>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li>src/main.cpp</li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
