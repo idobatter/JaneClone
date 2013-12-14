@@ -1,0 +1,18 @@
+language: cpp
+compiler:
+  - g++
+  - clang++
+install:
+  - sudo apt-get install libwxgtk2.8-dev libxml2-dev
+before_script:
+  - ./bootstrap && ./configure && make
+script: 
+branches:
+  only:
+    - master
+notifications:
+  recipients:
+    - newserver002@gmail.com
+  email:
+    on_success: change
+    on_failure: always

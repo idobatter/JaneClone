@@ -1,0 +1,347 @@
+***********************************
+JaneClone のインストール方法
+JaneClone Installation Instructions
+***********************************
+
+Copyright (C) 2013 Hiroyuki Nagata
+
+   Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.  This file is offered as-is,
+without warranty of any kind.
+
+基本インストール
+==================
+
+　Windows, Linux, Mac, BSD環境にてconfigure;makeのコマンドを実行すれば
+JaneCloneの実行ファイルが作成されます.以下, Window, Linux, Mac, BSD環境
+の順にインストール方法を記載します.
+
+ A.Windows(MinGW32)
+ B.Windows(MinGW64)
+ C.Windows(VC++)
+ D.Linux(RedHat系)
+ E.Linux(Debian系)
+ F.Mac OSX
+ G.BSD
+
+ [A.Windows(MinGW32)]
+ A-1. 依存するライブラリのインストール
+  
+  ライブラリは動的リンクにて作成します。
+  必要なライブラリはwxWidgets-2.8.12, libxml2です.
+  MinGW環境はTDM-GCC(http://tdm-gcc.tdragon.net/)を推奨します.
+  TDM-GCCに加えて、同サイトで配布されてるopenmpも一緒にインストールしてください.
+  (pthreadの環境を整えるため.)
+
+  [wxWidgetsのインストール]
+  $ cd /usr/local/src
+  $ tar xvf wxWidgets-2.8.12.tar.bz2
+  $ cd wxWidgets-2.8.12/
+
+  動的ライブラリをビルド、/mingw 以下へのインストールとします
+  $ ./configure --prefix=/mingw --with-msw --enable-unicode --disable-debug
+  $ make
+  $ make install
+
+  wx-configコマンドが使用出来れば成功
+  $ wx-config --version
+  $ 2.8.12
+
+  [libxml2のインストール]
+  libxml2をmingwでコンパイルする
+
+  $ cd /usr/local/src
+  $ wget http://xmlsoft.org/sources/libxml2-2.9.0.tar.gz
+  $ cd libxml2-2.9.0
+  $ ./configure --prefix=/mingw
+  $ make
+  $ make install
+
+  xml2-configコマンドが使用出来れば成功
+  $ xml2-config --version
+  $ 2.9.0
+
+ A-2. パッケージング
+
+  [JaneCloneのコンパイル]
+  $ git clone git://github.com/Hiroyuki-Nagata/JaneClone.git
+  $ cd /path/to/JaneClone
+  $ git submodule init
+  $ git submodule update
+  $ ./bootstrap
+  $ ./configure
+  $ make
+  $ make install package-win32-msi
+
+  プロジェクト内部にpackageディレクトリができていればビルド成功です
+
+ [A.Windows(MinGW64)]
+ B-1. 依存するライブラリのインストール
+
+  MinGW64環境ではJaneCloneを64bitアプリとしてビルドできます.
+  使用する環境はTDM-GCC(http://tdm-gcc.tdragon.net/)にて配布されている
+  MinGW64環境を想定します.
+
+  ライブラリを動的リンクします.
+  必要なライブラリはpthread, zlib, libxml2, nasm, libjpeg, libpng, tiff, wxWidgets-2.8.12です.
+
+  MinGWの環境は C:/MinGW64 を /mingw にマウントしている前提です
+
+  $ x86_64-w64-mingw32-gcc --version
+  x86_64-w64-mingw32-gcc.exe (tdm64-1) 4.7.1
+  Copyright (C) 2012 Free Software Foundation, Inc.
+  This is free software; see the source for copying conditions.  There is NO
+  warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+  0. pthread
+  $ wget http://sourceforge.net/settings/mirror_choices?projectname=tdm-gcc&filename=TDM-GCC%204.7%20series/4.7.1-tdm64-1/gcc-4.7.1-tdm64-1-openmp.tar.lzma
+  $ tar xvf gcc-4.7.1-tdm64-1-openmp.tar.lzma --lzma -C /mingw
+
+  1. zlib-1.2.7
+  $ cd /usr/local/src/zlib-1.2.7/
+  $ make -f win32/Makefile.gcc CC=x86_64-w64-mingw32-gcc
+  $ make -f win32/Makefile.gcc install BINARY_PATH=/mingw/bin INCLUDE_PATH=/mingw/include LIBRARY_PATH=/mingw/lib SHARED_MODE=1
+
+  2. libxml2-2.9.0
+  $ wget ftp://xmlsoft.org/libxml2/libxml2-2.9.0.tar.gz
+  $ ./configure --prefix=/mingw --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --enable-shared --with-threads=no  CFLAGS=-O2
+  $ make
+  $ make install
+
+  3. nasm-2.10.07
+  $ cd /usr/local/src/nasm-2.10.07
+  $ ./configure --prefix=/mingw --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32
+  $ make
+  $ make install
+
+  4. libjpeg-turbo-1.2.1
+  $ cd /usr/local/src/libjpeg-turbo-1.2.1
+  $ ./configure --prefix=/mingw --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32
+  $ make 
+  $ make install
+
+  5. libpng-1.5.13
+  $ cd /usr/local/src/libpng-1.5.13
+  $ ./configure --prefix=/mingw --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32
+  $ make
+  $ make install
+
+  6. tiff-4.0.3
+  $ cd /usr/local/src/tiff-4.0.3
+  $ ./configure --prefix=/mingw --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32
+  $ make
+  $ make install 
+
+  7. wxWidgets-2.8.12
+  $ wget http://prdownloads.sourceforge.net/wxwindows/wxWidgets-2.8.12.tar.bz2
+  $ tar xvf wxWidgets-2.8.12.tar.bz2
+  $ cd wxWidgets-2.8.12
+  $ wget --no-check-certificate https://mingw-w64-dgn.googlecode.com/svn/trunk/patch/wxWidgets-2.8.12-w64.patch
+  $ patch -p0 < wxWidgets-2.8.12-w64.patch
+  $ ./configure --prefix=/mingw --with-msw --enable-unicode --disable-debug --enable-gl --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32
+  $ sed -i 's/--define __WIN32__ --define __WIN95__ --define __GNUWIN32__/--define WX_CPU_AMD64/g' ./wx-config
+  $ make
+  $ make install
+
+  wx-configコマンドが使用出来れば成功
+  $ wx-config --version
+  $ 2.8.12
+
+ B-2. パッケージング
+
+  [JaneCloneのコンパイル]
+  $ git clone git://github.com/Hiroyuki-Nagata/JaneClone.git
+  $ cd /path/to/JaneClone
+  $ git submodule init
+  $ git submodule update
+  $ ./bootstrap
+  $ ./configure --build=x86_64-w64-mingw32 \
+    --host=x86_64-w64-mingw32              \
+    --target=x86_64-w64-mingw32
+  $ make
+  $ make package-win64-msi
+
+  もしLinuxからクロスコンパイルをする場合は以下の通り
+  $ ./bootstrap
+  $ PATH=$PATH:/usr/x86_64-w64-mingw32/bin               \
+  XML2CONFIG='/usr/x86_64-w64-mingw32/bin/xml2-config'   \
+  WX_CONFIG_PATH='/usr/x86_64-w64-mingw32/bin/wx-config' \
+  ./configure --prefix=/usr/x86_64-w64-mingw32           \
+  --build=x86_64-unknown-linux-gnu                       \
+  --host=x86_64-w64-mingw32                              \
+  --target=x86_64-w64-mingw32
+  $ make
+
+  プロジェクト内部にextras/packageディレクトリができていればビルド成功です.
+  Linux上でのWindows向けバイナリビルド方法については以下のリンクを参照してください.
+  https://github.com/Hiroyuki-Nagata/JaneClone/wiki/_pages
+
+ [D.Linux(RedHat系)]
+ D-1. 依存するライブラリのインストール
+
+  FedoraもしくはCentosの環境を想定します.
+  i386, x86_64の環境どちらでもコンパイルできると思います。
+　筆者はFedora17 x86_64の環境でビルドを行いました。
+  必要なライブラリはwxWidgets-2.8.12, libxml2です.
+
+  [wxWidgetsのインストール]
+  $ cd /usr/local/src
+  $ tar xvf wxWidgets-2.8.12.tar.bz2
+  $ cd wxWidgets-2.8.12/
+
+  静的ライブラリをビルド、/usr 以下へのインストールとします
+  ・/usr 以下にインストールされるのが不満な場合 --prefix=/hoge を指定してください
+　・Linuxに入っているGTKのバージョンが2の場合「--with-gtk2」、バージョンが3の場合
+　　「--with-gtk2」を指定するといいでしょう。
+
+  $ ./configure --with-gtk3 --enable-unicode
+  $ make
+  $ make install
+
+  wx-configコマンドが使用出来れば成功
+  $ wx-config --version
+  $ 2.8.12
+
+  [libxml2のインストール]
+  libxml2をyumを使ってインストールしてください
+  # yum install libxml2 libxml2-devel
+
+  xml2-configコマンドが使用出来れば成功
+  $ xml2-config --version
+  $ 2.7.8
+
+ D-2. パッケージング
+
+  [JaneCloneのコンパイル]
+
+  $ git clone git://github.com/Hiroyuki-Nagata/JaneClone.git
+  $ cd /path/to/JaneClone
+  $ git submodule init
+  $ git submodule update
+  $ ./bootstrap
+  $ ./configure
+  $ make
+  $ make install
+
+  プロジェクト内部にpackageディレクトリができていればビルド成功です
+
+ [E.Linux(Debian系)]
+ E-1. 依存するライブラリのインストール
+
+  DebianもしくはUbuntuの環境を想定します.
+  i386, x86_64の環境どちらでもコンパイルできると思います.
+　筆者はDebian Wheezy x86_64の環境でビルドを行いました.
+
+  // JaneClone本体のビルド用
+  # apt-get install debhelper autotools-dev libatk1.0-0 libc6		\ 
+  libcairo2 libdbus-1-3 libfontconfig1 libfreetype6 libgcc1   		\
+  libglib2.0-0 libgtk2.0-0 libpango1.0-0 libstdc++6 libwxbase2.8-0 	\
+  libwxgtk2.8-0 libxml2-dev autoconf automake libtool devscripts        \
+  fonts-mona cdbs
+
+  // ソースをダウンロードするため
+  # apt-get install git
+
+ E-2. パッケージング
+
+  $ git clone git://github.com/Hiroyuki-Nagata/JaneClone.git
+  $ cd /path/to/JaneClone
+  $ git submodule init
+  $ git submodule update
+  $ ./bootstrap
+  $ ./configure
+  $ make
+
+  ・make installで /usr/local 以下に janeclone のラッパースクリプトが入ります
+　・make package-deb で Debian のパッケージを作成できます
+
+ [F.Mac OSX]
+ F-1. 依存するライブラリのインストール
+
+  clang, gsedのインストール
+  # port install clang-3.3 gsed libtool
+
+  wxWidgets-2.9.5のインストール
+  # git clone https://github.com/wxWidgets/wxWidgets.git
+  # cd wxWidgets
+  # ./configure CXXFLAGS="-stdlib=libc++ -std=c++11 -DHAVE_TYPE_TRAITS" OBJCXXFLAGS="-stdlib=libc++ -std=c++11" \
+  CPPFLAGS="-stdlib=libc++" LDFLAGS="-stdlib=libc++" CXX=clang++-mp-3.3 CXXCPP="clang++-mp-3.3 -E"              \
+  CC=clang-mp-3.3 CPP="clang-mp-3.3 -E" --enable-unicode --enable-debug --enable-gdb-debug                      \
+  --with-macosx-sdk=/Developer/SDKs/MacOSX10.7.sdk --with-macosx-version-min=10.7 --with-cocoa                  \
+  --with-libjpeg=builtin --with-libpng=builtin --with-regex=builtin --with-libtiff=builtin                      \
+  --with-zlib=builtin --with-expat=builtin --enable-std_containers --enable-std_iostreams --enable-std_string
+  # make && make install
+
+ F-2. パッケージング
+
+  $ git clone git://github.com/Hiroyuki-Nagata/JaneClone.git
+  $ cd /path/to/JaneClone
+  $ git submodule init
+  $ git submodule update
+  $ ./bootstrap
+  $ ./configure CC='clang-mp-3.3' CXX='clang++-mp-3.3 -std=c++11 -stdlib=libc++'
+  $ make
+
+ [G.BSD]
+ G-1. 依存するライブラリのインストール
+
+  まず最初にGNOMEによるデスクトップ環境を構築してください。
+  また、ビルドにはGNU Autotoolsのパッケージ群が必要になります。
+  (automake/autoconf/libtool/autoreconf...)
+
+  必要なものを準備する
+  # pkg_add -r autoconf automake autoreconf
+  # pkg_add -r gsed
+  # pkg_add -r subversion
+
+  libc++/libcxxrtをビルドする必要がある(面倒ですねえ。。。)
+  # svn co svn://svn.freebsd.org/base/releng/9.1/lib /usr/src/lib
+  # svn co svn://svn.freebsd.org/base/releng/9.1/contrib /usr/src/contrib
+  # cd /usr/src/lib/libcxxrt
+  # make
+  # make install
+  # cd /usr/src/lib/libc++
+  # make CXX=clang++
+  # make install
+
+  wxWidgetsのライブラリのインストール
+  (wx-2.8はバグがあるので最新版をインストールする)
+  # git clone https://github.com/wxWidgets/wxWidgets.git
+  # cd wxWidgets
+  # git checkout WX_3_0_0-rc2
+  # cd ../
+  # mkdir wxWidgets-3.0.0-rc2
+  # cd wxWidgets-3.0.0-rc2/
+  # ../wxWidgets/configure CXXFLAGS="-stdlib=libc++ -std=c++11"       \
+    OBJCXXFLAGS="-stdlib=libc++ -std=c++11" CPPFLAGS="-stdlib=libc++" \
+    LDFLAGS="-stdlib=libc++" CXX=clang++ CXXCPP="clang++ -E" CC=clang \
+    CPP="clang -E" --enable-unicode --enable-debug --enable-gdb-debug \
+    --with-libjpeg=builtin --with-libpng=builtin --with-regex=builtin \
+    --with-libtiff=builtin --with-zlib=builtin --with-expat=builtin   \
+    --enable-std_containers --enable-std_iostreams --enable-std_string
+  # make
+  # make install
+
+  wx-configのリンク張りなおし
+  # ln -s /usr/local/bin/wxgtk2u-2.8-config /usr/local/bin/wx-config
+  ちゃんんとバージョンが出たら成功
+  # wx-config --version
+  2.8.12
+
+ G-2. パッケージング
+
+  $ git clone git://github.com/Hiroyuki-Nagata/JaneClone.git
+  $ cd /path/to/JaneClone
+  $ git submodule init
+  $ git submodule update
+  $ ./bootstrap
+  $ ./configure CC='clang' CXX='clang++ -stdlib=libc++'  
+  $ make
+
+コンパイラとそのオプション
+==========================
+
+  以下のコンパイルオプションはconfigure実行時に自動で有効にされる
+  ・-fno-stack-protector … スタックオーバーフロー対策
+  ・-std=c++0x           … C++11を将来的に使っていきたい
