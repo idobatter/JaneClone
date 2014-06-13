@@ -8,6 +8,8 @@ var searchData=
   ['setimagefile',['SetImageFile',['../classJaneCloneImageViewer.html#aad200296632e24201897fc91ff076b5c',1,'JaneCloneImageViewer']]],
   ['setimagefilename',['SetImageFileName',['../classSQLiteAccessor.html#a04d920fdbbf1f3f1b583569619c07fb4',1,'SQLiteAccessor::SetImageFileName(std::vector&lt; ImageFileInfo &gt; &amp;imageFileInfoArray)'],['../classSQLiteAccessor.html#aee26fb2dee6a6a7cf6ffd53ad56f0d31',1,'SQLiteAccessor::SetImageFileName(ImageFileInfo &amp;imageFileInfo)']]],
   ['setjanecloneproperties',['SetJaneCloneProperties',['../classJaneCloneUtil.html#ad79755777b435e1f509ee3d98d0d439a',1,'JaneCloneUtil']]],
+  ['setotherboardinfomation',['SetOtherBoardInfomation',['../classSocketCommunication.html#a0418d8b499b8e367c150f7c3d979794f',1,'SocketCommunication']]],
+  ['setoutsideboardinfo',['SetOutSideBoardInfo',['../classSQLiteAccessor.html#a638d577288ee00579975c8f9ee323ae0',1,'SQLiteAccessor']]],
   ['setpostcontent',['SetPostContent',['../classSocketCommunication.html#ae830362bf05be97bfaa6955ef1695221',1,'SocketCommunication']]],
   ['setshingetsunode',['SetShingetsuNode',['../classSQLiteAccessor.html#add6cbabed9e0b827ad0c6c59ff4ae51b',1,'SQLiteAccessor']]],
   ['setthreadcontenttonotebook',['SetThreadContentToNoteBook',['../classJaneClone.html#abcea0313c560f58ba0926a06ce175be4',1,'JaneClone']]],

@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 </div><!--header-->
 <div class="contents">
 
-<p>JaneClone本体はGUI構築用のwxFrameと マウスモーション管理用のwxMouseEventsManagerを継承する  
+<p>JaneCloneのGUI本体部分を構成するクラス  
  <a href="classJaneClone.html#details">[詳細]</a></p>
 
 <p><code>#include &lt;<a class="el" href="janeclone_8hpp_source.html">janeclone.hpp</a>&gt;</code></p>
@@ -109,6 +109,9 @@ Public メソッド</h2></td></tr>
 <tr class="memitem:abcea0313c560f58ba0926a06ce175be4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcea0313c560f58ba0926a06ce175be4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJaneClone.html#abcea0313c560f58ba0926a06ce175be4">SetThreadContentToNoteBook</a> (const wxString &amp;, const wxString &amp;, const wxString &amp;)</td></tr>
 <tr class="memdesc:abcea0313c560f58ba0926a06ce175be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッドをノートブックに反映するメソッド <br/></td></tr>
+<tr class="memitem:ae9ce5b04f31c695879058afa8ba32a52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9ce5b04f31c695879058afa8ba32a52"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJaneClone.html#ae9ce5b04f31c695879058afa8ba32a52">OnEnterWindow</a> (wxMouseEvent &amp;event)</td></tr>
+<tr class="memdesc:ae9ce5b04f31c695879058afa8ba32a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスのカーソルが特定のウィンドウに入った場合の処理 <br/></td></tr>
 <tr class="memitem:a2e2089c7aaed6ca4a90c81880dee709f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e2089c7aaed6ca4a90c81880dee709f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJaneClone.html#a2e2089c7aaed6ca4a90c81880dee709f">GetThreadInfoHash</a> (ThreadInfoHash &amp;threadInfoHash)</td></tr>
 <tr class="memdesc:a2e2089c7aaed6ca4a90c81880dee709f"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在JaneCloneが保持しているスレッド情報を取得する <br/></td></tr>
@@ -117,6 +120,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a00f77eac586a4de1103d3fddec44d0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在JaneCloneが保持しているスレッド情報を設定する <br/></td></tr>
 <tr class="memitem:a64f15250737b142045a2f8134af1287c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJaneClone.html#a64f15250737b142045a2f8134af1287c">CtrlF</a> (wxKeyEvent &amp;event)</td></tr>
 <tr class="memdesc:a64f15250737b142045a2f8134af1287c"><td class="mdescLeft">&#160;</td><td class="mdescRight">新月オプションが有効であればビルドする  <a href="#a64f15250737b142045a2f8134af1287c"></a><br/></td></tr>
+<tr class="memitem:a7dc01a725a209c913483b1f1f6b3fa40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJaneClone.html#a7dc01a725a209c913483b1f1f6b3fa40">Enter</a> (wxKeyEvent &amp;event)</td></tr>
+<tr class="memdesc:a7dc01a725a209c913483b1f1f6b3fa40"><td class="mdescLeft">&#160;</td><td class="mdescRight">ショートカットキー(Enter)のイベント  <a href="#a7dc01a725a209c913483b1f1f6b3fa40"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public メソッド</h2></td></tr>
@@ -141,7 +146,7 @@ static <a class="el" href="classJaneCloneImageViewer.html">JaneCloneImageViewer<
 <tr class="memdesc:a3898f17815a4fd07ced4c793f4ac1957"><td class="mdescLeft">&#160;</td><td class="mdescRight">USE_SHINGETSU. <br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>説明</h2>
-<div class="textblock"><p>JaneClone本体はGUI構築用のwxFrameと マウスモーション管理用のwxMouseEventsManagerを継承する </p>
+<div class="textblock"><p>JaneCloneのGUI本体部分を構成するクラス </p>
 </div><h2>コンストラクタとデストラクタ</h2>
 <a class="anchor" id="af75cb30c810ef72ca72a5f9b3607886a"></a>
 <div class="memitem">
@@ -218,6 +223,31 @@ static <a class="el" href="classJaneCloneImageViewer.html">JaneCloneImageViewer<
 
 </div>
 </div>
+<a class="anchor" id="a7dc01a725a209c913483b1f1f6b3fa40"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JaneClone::Enter </td>
+          <td>(</td>
+          <td class="paramtype">wxKeyEvent &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ショートカットキー(Enter)のイベント </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wxKeyEvent&amp;</td><td>event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>検索実行した:true, 検索実行しなかった:false </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a97cd18864de87b2766aa41640149daa2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +290,7 @@ static <a class="el" href="classJaneCloneImageViewer.html">JaneCloneImageViewer<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-JaneCloneに対してSat Dec 14 2013 10:56:57に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+JaneCloneに対してSat Jun 14 2014 03:20:40に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

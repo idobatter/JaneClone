@@ -416,53 +416,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;          <span class="keywordflow">return</span> wxListCtrl::GetItemData(item);</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;     };</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;     <span class="keywordtype">void</span> MotionEnterWindow(wxMouseEvent&amp; event);</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;     <span class="keywordtype">void</span> MotionLeaveWindow(wxMouseEvent&amp; event);</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;     <span class="keywordtype">void</span> SetFocus(wxFocusEvent&amp; event);</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;     <span class="comment">// 新着チェック</span></div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;     <span class="keywordtype">bool</span> f_check;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;     <span class="comment">// 番号</span></div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;     <span class="keywordtype">bool</span> f_number;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;     <span class="comment">// タイトル</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;     <span class="keywordtype">bool</span> f_title;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;     <span class="comment">// レス</span></div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;     <span class="keywordtype">bool</span> f_response;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;     <span class="comment">// 取得</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;     <span class="keywordtype">bool</span> f_cachedResponseNumber;</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;     <span class="comment">// 新着</span></div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;     <span class="keywordtype">bool</span> f_newResponseNumber;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;     <span class="comment">// 増レス</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;     <span class="keywordtype">bool</span> f_increaseResponseNumber;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;     <span class="comment">// 勢い</span></div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;     <span class="keywordtype">bool</span> f_momentum;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;     <span class="comment">// 最終取得</span></div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;     <span class="keywordtype">bool</span> f_lastUpdate;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;     <span class="comment">// since</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;     <span class="keywordtype">bool</span> f_since;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;     <span class="comment">// 固有番号(ホスト名にこの番号をつけることでスレッドのURLになる)</span></div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;     <span class="keywordtype">bool</span> f_oid;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;     <span class="comment">// 板</span></div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;     <span class="keywordtype">bool</span> f_boardName;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;     <span class="comment">// 新着チェック</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;     <span class="keywordtype">bool</span> f_check;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;     <span class="comment">// 番号</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;     <span class="keywordtype">bool</span> f_number;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;     <span class="comment">// タイトル</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;     <span class="keywordtype">bool</span> f_title;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;     <span class="comment">// レス</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;     <span class="keywordtype">bool</span> f_response;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;     <span class="comment">// 取得</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;     <span class="keywordtype">bool</span> f_cachedResponseNumber;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;     <span class="comment">// 新着</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;     <span class="keywordtype">bool</span> f_newResponseNumber;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;     <span class="comment">// 増レス</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;     <span class="keywordtype">bool</span> f_increaseResponseNumber;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;     <span class="comment">// 勢い</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;     <span class="keywordtype">bool</span> f_momentum;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;     <span class="comment">// 最終取得</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;     <span class="keywordtype">bool</span> f_lastUpdate;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;     <span class="comment">// since</span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;     <span class="keywordtype">bool</span> f_since;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;     <span class="comment">// 固有番号(ホスト名にこの番号をつけることでスレッドのURLになる)</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;     <span class="keywordtype">bool</span> f_oid;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;     <span class="comment">// 板</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;     <span class="keywordtype">bool</span> f_boardName;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;     <span class="comment">// 内部の色情報等</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;     wxListItemAttr m_attr;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;     wxListItemAttr m_attr_search;</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;     <span class="comment">// 内部の色情報等</span></div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;     wxListItemAttr m_attr;</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;     wxListItemAttr m_attr_search;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;     <span class="comment">// 検索を行なっているかどうか</span></div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;     <span class="keywordtype">bool</span> f_nowSearching;</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;     <span class="comment">// 検索に当てはまった項目の数</span></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;     <span class="keywordtype">long</span> searchItemNum;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;     DECLARE_EVENT_TABLE()</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;     DECLARE_DYNAMIC_CLASS(<a class="code" href="classVirtualBoardListCtrl.html" title="スレッド一覧リスト用の仮想リストコントロール 大量のデータを扱うときは仮想リストを使用する">VirtualBoardListCtrl</a>)</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;};</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* VIRTUALBOARDLISTCTRL_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;     <span class="comment">// 検索を行なっているかどうか</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;     <span class="keywordtype">bool</span> f_nowSearching;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;     <span class="comment">// 検索に当てはまった項目の数</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;     <span class="keywordtype">long</span> searchItemNum;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;     DECLARE_DYNAMIC_CLASS(<a class="code" href="classVirtualBoardListCtrl.html" title="スレッド一覧リスト用の仮想リストコントロール 大量のデータを扱うときは仮想リストを使用する">VirtualBoardListCtrl</a>)</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;};</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* VIRTUALBOARDLISTCTRL_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-JaneCloneに対してSat Dec 14 2013 10:56:57に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+JaneCloneに対してSat Jun 14 2014 03:20:40に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -128,8 +128,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:a2f18cee1479fbfc1c9307fe11ee5c20b"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレタブの情報をSQLiteに格納する  <a href="#a2f18cee1479fbfc1c9307fe11ee5c20b"></a><br/></td></tr>
 <tr class="memitem:a66f1ad289451ef191ad571ae3d80ee97"><td class="memItemLeft" align="right" valign="top">static wxArrayString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSQLiteAccessor.html#a66f1ad289451ef191ad571ae3d80ee97">GetThreadInfo</a> (const wxWindowID id=wxID_ANY)</td></tr>
 <tr class="memdesc:a66f1ad289451ef191ad571ae3d80ee97"><td class="mdescLeft">&#160;</td><td class="mdescRight">最近閉じたスレッドタブ名を取得する  <a href="#a66f1ad289451ef191ad571ae3d80ee97"></a><br/></td></tr>
-<tr class="memitem:a0eeae0a100c3793b451d26021499b345"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSQLiteAccessor.html#a0eeae0a100c3793b451d26021499b345">GetThreadFullInfo</a> (const int number, <a class="el" href="classThreadInfo.html">ThreadInfo</a> *threadInfo, const wxWindowID id)</td></tr>
-<tr class="memdesc:a0eeae0a100c3793b451d26021499b345"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッドタブ情報を取得する  <a href="#a0eeae0a100c3793b451d26021499b345"></a><br/></td></tr>
+<tr class="memitem:a895510ab2181e14a3be2524ab23f365d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSQLiteAccessor.html#a895510ab2181e14a3be2524ab23f365d">GetThreadFullInfo</a> (const int number, std::unique_ptr&lt; <a class="el" href="classThreadInfo.html">ThreadInfo</a> &gt; &amp;threadInfo, const wxWindowID id)</td></tr>
+<tr class="memdesc:a895510ab2181e14a3be2524ab23f365d"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッドタブ情報を取得する  <a href="#a895510ab2181e14a3be2524ab23f365d"></a><br/></td></tr>
 <tr class="memitem:a1645d3719670a416e6b95282f9985ccf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSQLiteAccessor.html#a1645d3719670a416e6b95282f9985ccf">SetClosedBoardInfo</a> (<a class="el" href="classURLvsBoardName.html">URLvsBoardName</a> *hash)</td></tr>
 <tr class="memdesc:a1645d3719670a416e6b95282f9985ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">板タブを閉じた際に情報をSQLiteに格納する  <a href="#a1645d3719670a416e6b95282f9985ccf"></a><br/></td></tr>
 <tr class="memitem:aeefc59c135194621172da42b3f398b53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeefc59c135194621172da42b3f398b53"></a>
@@ -164,6 +164,8 @@ static wxArrayString&#160;</td><td class="memItemRight" valign="bottom"><a class
 <tr class="memdesc:a8371bdae23da41b73d94d720f3a3ed9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像のファイル名とUUIDのリストをデータベースから取得する  <a href="#a8371bdae23da41b73d94d720f3a3ed9b"></a><br/></td></tr>
 <tr class="memitem:a40bd22682dd1c6794f75ac112b2040ca"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSQLiteAccessor.html#a40bd22682dd1c6794f75ac112b2040ca">GetImageFileName</a> (const wxString &amp;fileName, <a class="el" href="structImageFileInfo.html">ImageFileInfo</a> &amp;imageFileInfo)</td></tr>
 <tr class="memdesc:a40bd22682dd1c6794f75ac112b2040ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像のファイル名とUUIDのをデータベースから取得する  <a href="#a40bd22682dd1c6794f75ac112b2040ca"></a><br/></td></tr>
+<tr class="memitem:a638d577288ee00579975c8f9ee323ae0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSQLiteAccessor.html#a638d577288ee00579975c8f9ee323ae0">SetOutSideBoardInfo</a> (const wxString &amp;url, const wxString &amp;boardName, const wxString &amp;category)</td></tr>
+<tr class="memdesc:a638d577288ee00579975c8f9ee323ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">外部板の情報をテーブルに登録する  <a href="#a638d577288ee00579975c8f9ee323ae0"></a><br/></td></tr>
 </table>
 <h2>コンストラクタとデストラクタ</h2>
 <a class="anchor" id="a3c75922b0589742b04ea1b52d30f0b4b"></a>
@@ -181,6 +183,8 @@ static wxArrayString&#160;</td><td class="memItemRight" valign="bottom"><a class
 
 <p>SQLiteデータベースの初期化・トランザクションあり </p>
 <p>データベースの初期化、トランザクションあり </p>
+<p>true:1, false:0</p>
+<p>USE_SHINGETSU </p>
 
 </div>
 </div>
@@ -283,7 +287,7 @@ static wxArrayString&#160;</td><td class="memItemRight" valign="bottom"><a class
 
 </div>
 </div>
-<a class="anchor" id="a0eeae0a100c3793b451d26021499b345"></a>
+<a class="anchor" id="a895510ab2181e14a3be2524ab23f365d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -299,7 +303,7 @@ static wxArrayString&#160;</td><td class="memItemRight" valign="bottom"><a class
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classThreadInfo.html">ThreadInfo</a> *&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classThreadInfo.html">ThreadInfo</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>threadInfo</em>, </td>
         </tr>
         <tr>
@@ -480,6 +484,56 @@ static wxArrayString&#160;</td><td class="memItemRight" valign="bottom"><a class
 
 </div>
 </div>
+<a class="anchor" id="a638d577288ee00579975c8f9ee323ae0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SQLiteAccessor::SetOutSideBoardInfo </td>
+          <td>(</td>
+          <td class="paramtype">const wxString &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wxString &amp;&#160;</td>
+          <td class="paramname"><em>boardName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wxString &amp;&#160;</td>
+          <td class="paramname"><em>category</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>外部板の情報をテーブルに登録する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td>wxString&amp; 外部板のURL </td></tr>
+    <tr><td class="paramname">const</td><td>wxString&amp; 外部板の板名 </td></tr>
+    <tr><td class="paramname">const</td><td>wxString&amp; 外部板のカテゴリ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="add6cbabed9e0b827ad0c6c59ff4ae51b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -578,7 +632,7 @@ static wxArrayString&#160;</td><td class="memItemRight" valign="bottom"><a class
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-JaneCloneに対してSat Dec 14 2013 10:56:58に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+JaneCloneに対してSat Jun 14 2014 03:20:40に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
