@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>JaneClone: クラス VirtualBoardListCtrl</title>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>JaneClone: VirtualBoardListCtrl クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,13 +31,13 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 作成： Doxygen 1.8.1.2 -->
+<!-- 構築: Doxygen 1.8.7 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="index.html"><span>総合概要</span></a></li>
       <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
       <li><a href="files.html"><span>ファイル</span></a></li>
       <li>
@@ -59,10 +60,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>構成</span></a></li>
-      <li><a href="classes.html"><span>構成索引</span></a></li>
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
       <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
-      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -82,86 +83,109 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public 型</a> &#124;
-<a href="#pub-methods">Public メソッド</a> &#124;
-<a href="#pub-attribs">Public 変数</a> &#124;
-<a href="classVirtualBoardListCtrl-members.html">すべてのメンバ一覧</a>  </div>
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="classVirtualBoardListCtrl-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
-<div class="title">クラス VirtualBoardListCtrl</div>  </div>
+<div class="title">VirtualBoardListCtrl クラス</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>スレッド一覧リスト用の仮想リストコントロール 大量のデータを扱うときは仮想リストを使用する  
- <a href="classVirtualBoardListCtrl.html#details">[詳細]</a></p>
+ <a href="classVirtualBoardListCtrl.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="virtualboardlistctrl_8hpp_source.html">virtualboardlistctrl.hpp</a>&gt;</code></p>
+<div class="dynheader">
+VirtualBoardListCtrl の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classVirtualBoardListCtrl.png" usemap="#VirtualBoardListCtrl_map" alt=""/>
+  <map id="VirtualBoardListCtrl_map" name="VirtualBoardListCtrl_map">
+</map>
+ </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
-Public 型</h2></td></tr>
-<tr class="memitem:a79abe40e6bba43887aef7cff38001268"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Columns</b> { <br/>
-&#160;&#160;<b>COL_CHK</b> =  0, 
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a79abe40e6bba43887aef7cff38001268"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79abe40e6bba43887aef7cff38001268"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Columns</b> { <br />
+&#160;&#160;<b>COL_CHK</b> = 0, 
 <b>COL_NUM</b>, 
 <b>COL_TITLE</b>, 
 <b>COL_RESP</b>, 
-<br/>
+<br />
 &#160;&#160;<b>COL_CACHEDRES</b>, 
 <b>COL_NEWRESP</b>, 
 <b>COL_INCRESP</b>, 
 <b>COL_MOMENTUM</b>, 
-<br/>
+<br />
 &#160;&#160;<b>COL_LASTUP</b>, 
 <b>COL_SINCE</b>, 
 <b>COL_OID</b>, 
 <b>COL_BOARDNAME</b>, 
-<br/>
+<br />
 &#160;&#160;<b>COL_ENUMS_END</b>
-<br/>
+<br />
  }</td></tr>
+<tr class="separator:a79abe40e6bba43887aef7cff38001268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
-Public メソッド</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
 <tr class="memitem:aee5c9452bd7416be54278ed1a88d4c9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee5c9452bd7416be54278ed1a88d4c9a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#aee5c9452bd7416be54278ed1a88d4c9a">VirtualBoardListCtrl</a> ()</td></tr>
-<tr class="memdesc:aee5c9452bd7416be54278ed1a88d4c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br/></td></tr>
+<tr class="memdesc:aee5c9452bd7416be54278ed1a88d4c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
+<tr class="separator:aee5c9452bd7416be54278ed1a88d4c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7348205785060bace68bc69ac075ffc4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7348205785060bace68bc69ac075ffc4"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>VirtualBoardListCtrl</b> (const <a class="el" href="classVirtualBoardListCtrl.html">VirtualBoardListCtrl</a> &amp;)</td></tr>
+<tr class="separator:a7348205785060bace68bc69ac075ffc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c0d16b93443d71e6c121b20fe730e9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#a6c0d16b93443d71e6c121b20fe730e9e">VirtualBoardListCtrl</a> (wxWindow *parent, const wxWindowID id, const wxString &amp;boardName, const wxString &amp;outputPath, const std::map&lt; wxString, <a class="el" href="classThreadList.html">ThreadList</a> &gt; &amp;oldThreadMap, bool targetIsShingetsu=false)</td></tr>
-<tr class="memdesc:a6c0d16b93443d71e6c121b20fe730e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ：配置するwindowと板名を指定  <a href="#a6c0d16b93443d71e6c121b20fe730e9e"></a><br/></td></tr>
+<tr class="memdesc:a6c0d16b93443d71e6c121b20fe730e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ：配置するwindowと板名を指定  <a href="#a6c0d16b93443d71e6c121b20fe730e9e">[詳解]</a><br /></td></tr>
+<tr class="separator:a6c0d16b93443d71e6c121b20fe730e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8d6648ce89c04e54ba6cc8ce3c04f27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#af8d6648ce89c04e54ba6cc8ce3c04f27">FileLoadMethod2ch</a> (const wxString &amp;boardName, const wxString &amp;outputPath, const std::map&lt; wxString, <a class="el" href="classThreadList.html">ThreadList</a> &gt; &amp;oldThreadMap)</td></tr>
-<tr class="memdesc:af8d6648ce89c04e54ba6cc8ce3c04f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">2chのdatファイルを読み出す処理  <a href="#af8d6648ce89c04e54ba6cc8ce3c04f27"></a><br/></td></tr>
+<tr class="memdesc:af8d6648ce89c04e54ba6cc8ce3c04f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">2chのdatファイルを読み出す処理  <a href="#af8d6648ce89c04e54ba6cc8ce3c04f27">[詳解]</a><br /></td></tr>
+<tr class="separator:af8d6648ce89c04e54ba6cc8ce3c04f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25e81334fbb4497599487881638e25d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#a25e81334fbb4497599487881638e25d4">VirtualBoardListCtrl</a> (wxWindow *parent, const wxString &amp;boardName, const wxArrayString &amp;datFileList)</td></tr>
-<tr class="memdesc:a25e81334fbb4497599487881638e25d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">USE_SHINGETSU.  <a href="#a25e81334fbb4497599487881638e25d4"></a><br/></td></tr>
+<tr class="memdesc:a25e81334fbb4497599487881638e25d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">USE_SHINGETSU.  <a href="#a25e81334fbb4497599487881638e25d4">[詳解]</a><br /></td></tr>
+<tr class="separator:a25e81334fbb4497599487881638e25d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7edea08eff2484fe48d5e9631b516d2"><td class="memItemLeft" align="right" valign="top">VirtualBoardList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#ae7edea08eff2484fe48d5e9631b516d2">ThreadListUpdate</a> (const wxString &amp;boardName, const wxString &amp;outputPath)</td></tr>
-<tr class="memdesc:ae7edea08eff2484fe48d5e9631b516d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部リストの更新処理  <a href="#ae7edea08eff2484fe48d5e9631b516d2"></a><br/></td></tr>
+<tr class="memdesc:ae7edea08eff2484fe48d5e9631b516d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部リストの更新処理  <a href="#ae7edea08eff2484fe48d5e9631b516d2">[詳解]</a><br /></td></tr>
+<tr class="separator:ae7edea08eff2484fe48d5e9631b516d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27d538e0f9aad59777d5596be7077f0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27d538e0f9aad59777d5596be7077f0c"></a>
 <a class="el" href="classVirtualBoardListCtrl.html">VirtualBoardListCtrl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#a27d538e0f9aad59777d5596be7077f0c">operator=</a> (const <a class="el" href="classVirtualBoardListCtrl.html">VirtualBoardListCtrl</a> &amp;)</td></tr>
-<tr class="memdesc:a27d538e0f9aad59777d5596be7077f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">オペレーターに対する参照返し <br/></td></tr>
+<tr class="memdesc:a27d538e0f9aad59777d5596be7077f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">オペレーターに対する参照返し <br /></td></tr>
+<tr class="separator:a27d538e0f9aad59777d5596be7077f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a9300189d99150009c724ff882b613d"><td class="memItemLeft" align="right" valign="top">wxString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#a9a9300189d99150009c724ff882b613d">OnGetItemText</a> (long item, long column) const </td></tr>
-<tr class="memdesc:a9a9300189d99150009c724ff882b613d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたアイテムとカラムに存在するテキストを返す  <a href="#a9a9300189d99150009c724ff882b613d"></a><br/></td></tr>
+<tr class="memdesc:a9a9300189d99150009c724ff882b613d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたアイテムとカラムに存在するテキストを返す  <a href="#a9a9300189d99150009c724ff882b613d">[詳解]</a><br /></td></tr>
+<tr class="separator:a9a9300189d99150009c724ff882b613d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab955c82f5ae967fbf043ffcec9b076fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab955c82f5ae967fbf043ffcec9b076fb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#ab955c82f5ae967fbf043ffcec9b076fb">SortVectorItems</a> (int col)</td></tr>
-<tr class="memdesc:ab955c82f5ae967fbf043ffcec9b076fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部のリストをソートする <br/></td></tr>
+<tr class="memdesc:ab955c82f5ae967fbf043ffcec9b076fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部のリストをソートする <br /></td></tr>
+<tr class="separator:ab955c82f5ae967fbf043ffcec9b076fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee36fc1508cad2625f1993082884edcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee36fc1508cad2625f1993082884edcb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#aee36fc1508cad2625f1993082884edcb">CopyVectorItems</a> (VirtualBoardList &amp;vBoardList)</td></tr>
-<tr class="memdesc:aee36fc1508cad2625f1993082884edcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部のリストをコピーして渡す <br/></td></tr>
+<tr class="memdesc:aee36fc1508cad2625f1993082884edcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部のリストをコピーして渡す <br /></td></tr>
+<tr class="separator:aee36fc1508cad2625f1993082884edcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c4466d658d09cdbef6e1a94de8bbe99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c4466d658d09cdbef6e1a94de8bbe99"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#a3c4466d658d09cdbef6e1a94de8bbe99">SearchAndSortItems</a> (const wxString &amp;keyword)</td></tr>
-<tr class="memdesc:a3c4466d658d09cdbef6e1a94de8bbe99"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッドタイトル検索を実施する <br/></td></tr>
+<tr class="memdesc:a3c4466d658d09cdbef6e1a94de8bbe99"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッドタイトル検索を実施する <br /></td></tr>
+<tr class="separator:a3c4466d658d09cdbef6e1a94de8bbe99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add759e0a4d2d3101e21342dce68aaee4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add759e0a4d2d3101e21342dce68aaee4"></a>
 long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#add759e0a4d2d3101e21342dce68aaee4">GetItemCount</a> ()</td></tr>
-<tr class="memdesc:add759e0a4d2d3101e21342dce68aaee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">リスト内部のアイテムの数を返す <br/></td></tr>
+<tr class="memdesc:add759e0a4d2d3101e21342dce68aaee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">リスト内部のアイテムの数を返す <br /></td></tr>
+<tr class="separator:add759e0a4d2d3101e21342dce68aaee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8336701d90f8d24da1c697232201725"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8336701d90f8d24da1c697232201725"></a>
 long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVirtualBoardListCtrl.html#ab8336701d90f8d24da1c697232201725">GetColumnCount</a> ()</td></tr>
-<tr class="memdesc:ab8336701d90f8d24da1c697232201725"><td class="mdescLeft">&#160;</td><td class="mdescRight">リスト内部のカラムの数を返す <br/></td></tr>
+<tr class="memdesc:ab8336701d90f8d24da1c697232201725"><td class="mdescLeft">&#160;</td><td class="mdescRight">リスト内部のカラムの数を返す <br /></td></tr>
+<tr class="separator:ab8336701d90f8d24da1c697232201725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
-Public 変数</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
 <tr class="memitem:a9bdfe8ce5c840cac2f56c3e53a76ab60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bdfe8ce5c840cac2f56c3e53a76ab60"></a>
 VirtualBoardList&#160;</td><td class="memItemRight" valign="bottom"><b>m_vBoardList</b></td></tr>
+<tr class="separator:a9bdfe8ce5c840cac2f56c3e53a76ab60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2>説明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>スレッド一覧リスト用の仮想リストコントロール 大量のデータを扱うときは仮想リストを使用する </p>
-</div><h2>コンストラクタとデストラクタ</h2>
+</div><h2 class="groupheader">構築子と解体子</h2>
 <a class="anchor" id="a6c0d16b93443d71e6c121b20fe730e9e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -257,8 +281,7 @@ VirtualBoardList&#160;</td><td class="memItemRight" valign="bottom"><b>m_vBoardL
 
 <p>USE_SHINGETSU. </p>
 <p>コンストラクタ：ログ一覧リスト作成用</p>
-<p>コンストラクタ：ログ一覧リスト作成用 </p>
-<dl class="params"><dt>引数</dt><dd>
+<p>コンストラクタ：ログ一覧リスト作成用 </p><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">wxWindow*</td><td>parent 親ウィンドウ </td></tr>
     <tr><td class="paramname">wxString</td><td>boardName 板名(ログ一覧で固定) </td></tr>
@@ -276,7 +299,7 @@ VirtualBoardList&#160;</td><td class="memItemRight" valign="bottom"><b>m_vBoardL
 
 </div>
 </div>
-<h2>関数</h2>
+<h2 class="groupheader">関数詳解</h2>
 <a class="anchor" id="af8d6648ce89c04e54ba6cc8ce3c04f27"></a>
 <div class="memitem">
 <div class="memproto">
@@ -383,8 +406,7 @@ VirtualBoardList&#160;</td><td class="memItemRight" valign="bottom"><b>m_vBoardL
   </table>
   </dd>
 </dl>
-<p>内部リストの更新処理 </p>
-<dl class="params"><dt>引数</dt><dd>
+<p>内部リストの更新処理 </p><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">wxString</td><td>boardName 板名  wxString outputPath datファイルのパス </td></tr>
     <tr><td class="paramname">VirtualBoardList</td><td>更新したリストのコンテナ </td></tr>
@@ -396,16 +418,16 @@ VirtualBoardList&#160;</td><td class="memItemRight" valign="bottom"><b>m_vBoardL
 
 </div>
 </div>
-<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
 <li>src/<a class="el" href="virtualboardlistctrl_8hpp_source.html">virtualboardlistctrl.hpp</a></li>
 <li>src/virtualboardlistctrl.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-JaneCloneに対してSat Jun 14 2014 03:20:41に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+2014年07月24日(木) 11時57分06秒作成 - JaneClone / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
+</a> 1.8.7
 </small></address>
 </body>
 </html>

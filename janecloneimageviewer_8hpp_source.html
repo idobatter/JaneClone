@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
 <title>JaneClone: src/janecloneimageviewer.hpp ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -30,13 +31,13 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 作成： Doxygen 1.8.1.2 -->
+<!-- 構築: Doxygen 1.8.7 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="index.html"><span>総合概要</span></a></li>
       <li><a href="annotated.html"><span>クラス</span></a></li>
       <li class="current"><a href="files.html"><span>ファイル</span></a></li>
       <li>
@@ -88,8 +89,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifndef JANECLONEIMAGEVIEWER_HPP_</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define JANECLONEIMAGEVIEWER_HPP_</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define JANECLONEIMAGEVIEWER_HPP_</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;wx/wx.h&gt;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;wx/aui/auibook.h&gt;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;wx/dc.h&gt;</span></div>
@@ -102,22 +103,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;imagepanel.hpp&quot;</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//class JaneCloneImageViewer : public wxDialog {</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classJaneCloneImageViewer.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classJaneCloneImageViewer.html" title="janecloneimageviewer.hpp - janeclone&#39;s plain imageviewer">JaneCloneImageViewer</a> : <span class="keyword">public</span> wxFrame {</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classJaneCloneImageViewer.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classJaneCloneImageViewer.html">JaneCloneImageViewer</a> : <span class="keyword">public</span> wxFrame {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;     <a class="code" href="classJaneCloneImageViewer.html" title="janecloneimageviewer.hpp - janeclone&#39;s plain imageviewer">JaneCloneImageViewer</a>(wxWindow* parent, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> wxString&amp; title,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;     <a class="code" href="classJaneCloneImageViewer.html">JaneCloneImageViewer</a>(wxWindow* parent, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> wxString&amp; title,</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                          <span class="keyword">const</span> wxPoint&amp; pos = wxDefaultPosition, <span class="keyword">const</span> wxSize&amp; size =</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                          wxDefaultSize, <span class="keywordtype">long</span> style = wxDEFAULT_FRAME_STYLE);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;     </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;     <span class="comment">// 画像ファイルの情報を設定する</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classJaneCloneImageViewer.html#aad200296632e24201897fc91ff076b5c" title="画像ファイルの情報を設定する">SetImageFile</a>(<a class="code" href="structDownloadImageResult.html">DownloadImageResult</a>* result);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classJaneCloneImageViewer.html#aad200296632e24201897fc91ff076b5c">SetImageFile</a>(<a class="code" href="structDownloadImageResult.html">DownloadImageResult</a>* result);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;     <span class="comment">// ウィンドウ上で右クリックした場合の処理</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classJaneCloneImageViewer.html#aec93b79ca58b4d4d1d9f4764076a21fb" title="画像ビューアで右クリックした場合の処理">OnRightClickImageViewer</a>(wxMouseEvent&amp; event);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classJaneCloneImageViewer.html#aec93b79ca58b4d4d1d9f4764076a21fb">OnRightClickImageViewer</a>(wxMouseEvent&amp; event);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;     <a class="code" href="classJaneCloneImageViewer.html" title="janecloneimageviewer.hpp - janeclone&#39;s plain imageviewer">JaneCloneImageViewer</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;     ~<a class="code" href="classJaneCloneImageViewer.html" title="janecloneimageviewer.hpp - janeclone&#39;s plain imageviewer">JaneCloneImageViewer</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;     <a class="code" href="classJaneCloneImageViewer.html">JaneCloneImageViewer</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;     ~<a class="code" href="classJaneCloneImageViewer.html">JaneCloneImageViewer</a>();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;     <span class="keywordtype">void</span> set_properties(<span class="keyword">const</span> wxString&amp; title);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;     <span class="keywordtype">void</span> do_layout();</div>
@@ -127,8 +128,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;     <span class="comment">// 画像を載せるノートブック</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;     wxAuiNotebook* thumbnailNoteBook;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;     <a class="code" href="classJaneCloneImageViewer.html" title="janecloneimageviewer.hpp - janeclone&#39;s plain imageviewer">JaneCloneImageViewer</a>(<span class="keyword">const</span> <a class="code" href="classJaneCloneImageViewer.html" title="janecloneimageviewer.hpp - janeclone&#39;s plain imageviewer">JaneCloneImageViewer</a>&amp; rhs);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;     <a class="code" href="classJaneCloneImageViewer.html" title="janecloneimageviewer.hpp - janeclone&#39;s plain imageviewer">JaneCloneImageViewer</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classJaneCloneImageViewer.html" title="janecloneimageviewer.hpp - janeclone&#39;s plain imageviewer">JaneCloneImageViewer</a>&amp; rhs);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;     <a class="code" href="classJaneCloneImageViewer.html">JaneCloneImageViewer</a>(<span class="keyword">const</span> <a class="code" href="classJaneCloneImageViewer.html">JaneCloneImageViewer</a>&amp; rhs);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;     <a class="code" href="classJaneCloneImageViewer.html">JaneCloneImageViewer</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classJaneCloneImageViewer.html">JaneCloneImageViewer</a>&amp; rhs);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;     <span class="comment">// ウィンドウを閉じるイベント</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;     <span class="keywordtype">void</span> OnClose(wxCloseEvent&amp; event);</div>
@@ -172,12 +173,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* JANECLONEIMAGEVIEWER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="structDownloadImageResult_html"><div class="ttname"><a href="structDownloadImageResult.html">DownloadImageResult</a></div><div class="ttdef"><b>Definition:</b> datatype.hpp:268</div></div>
+<div class="ttc" id="classJaneCloneImageViewer_html_aad200296632e24201897fc91ff076b5c"><div class="ttname"><a href="classJaneCloneImageViewer.html#aad200296632e24201897fc91ff076b5c">JaneCloneImageViewer::SetImageFile</a></div><div class="ttdeci">void SetImageFile(DownloadImageResult *result)</div><div class="ttdoc">画像ファイルの情報を設定する </div><div class="ttdef"><b>Definition:</b> janecloneimageviewer.cpp:126</div></div>
+<div class="ttc" id="classJaneCloneImageViewer_html_aec93b79ca58b4d4d1d9f4764076a21fb"><div class="ttname"><a href="classJaneCloneImageViewer.html#aec93b79ca58b4d4d1d9f4764076a21fb">JaneCloneImageViewer::OnRightClickImageViewer</a></div><div class="ttdeci">void OnRightClickImageViewer(wxMouseEvent &amp;event)</div><div class="ttdoc">画像ビューアで右クリックした場合の処理 </div><div class="ttdef"><b>Definition:</b> janecloneimageviewer.cpp:236</div></div>
+<div class="ttc" id="classJaneCloneImageViewer_html"><div class="ttname"><a href="classJaneCloneImageViewer.html">JaneCloneImageViewer</a></div><div class="ttdoc">janecloneimageviewer.hpp - janeclone&#39;s plain imageviewer </div><div class="ttdef"><b>Definition:</b> janecloneimageviewer.hpp:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-JaneCloneに対してSat Jun 14 2014 03:20:39に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+2014年07月24日(木) 11時57分06秒作成 - JaneClone / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
+</a> 1.8.7
 </small></address>
 </body>
 </html>
