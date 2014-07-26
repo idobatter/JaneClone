@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['virtualboardlistctrl',['VirtualBoardListCtrl',['../classVirtualBoardListCtrl.html',1,'VirtualBoardListCtrl'],['../classVirtualBoardListCtrl.html#aee5c9452bd7416be54278ed1a88d4c9a',1,'VirtualBoardListCtrl::VirtualBoardListCtrl()'],['../classVirtualBoardListCtrl.html#a6c0d16b93443d71e6c121b20fe730e9e',1,'VirtualBoardListCtrl::VirtualBoardListCtrl(wxWindow *parent, const wxWindowID id, const wxString &amp;boardName, const wxString &amp;outputPath, const std::map&lt; wxString, ThreadList &gt; &amp;oldThreadMap, bool targetIsShingetsu=false)'],['../classVirtualBoardListCtrl.html#a25e81334fbb4497599487881638e25d4',1,'VirtualBoardListCtrl::VirtualBoardListCtrl(wxWindow *parent, const wxString &amp;boardName, const wxArrayString &amp;datFileList)']]],
-  ['virtualboardlistitem',['VirtualBoardListItem',['../classVirtualBoardListItem.html',1,'VirtualBoardListItem'],['../classVirtualBoardListItem.html#a6731cbb0b661b6b91d77c069bdae4be8',1,'VirtualBoardListItem::VirtualBoardListItem()']]]
+  ['urlencode',['UrlEncode',['../classJaneCloneUtil.html#ac664e1cfee1f780b219eca8141f3c48a',1,'JaneCloneUtil::UrlEncode(const std::string &amp;str)'],['../classJaneCloneUtil.html#a1397996c5d5b2fb55ece347fafd42bd6',1,'JaneCloneUtil::UrlEncode(const wxString &amp;str)']]],
+  ['urlvsboardname',['URLvsBoardName',['../classURLvsBoardName.html',1,'']]],
+  ['usersettingpanel',['UserSettingPanel',['../classUserSettingPanel.html',1,'UserSettingPanel'],['../classUserSettingPanel.html#a5102f8d0f1bc5c33b89fa07fb2f6cc30',1,'UserSettingPanel::UserSettingPanel()']]]
 ];

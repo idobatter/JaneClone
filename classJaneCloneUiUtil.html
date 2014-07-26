@@ -100,10 +100,153 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 <tr class="memitem:abf4a43ef040a1edbeced450763557443"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJaneCloneUiUtil.html#abf4a43ef040a1edbeced450763557443">SetTreeCtrlCommonSetting</a> (wxTreeCtrl *treeCtrl, const wxWindowID id)</td></tr>
 <tr class="memdesc:abf4a43ef040a1edbeced450763557443"><td class="mdescLeft">&#160;</td><td class="mdescRight">wxTreeCtrlのインスタンスを受け取って共通の設定を行う  <a href="#abf4a43ef040a1edbeced450763557443">[詳解]</a><br /></td></tr>
 <tr class="separator:abf4a43ef040a1edbeced450763557443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc92f46b0bdc12e59e750a31e199cbcf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJaneCloneUiUtil.html#acc92f46b0bdc12e59e750a31e199cbcf">QueueEventHelper</a> (const wxWindowID type, const wxWindowID id)</td></tr>
+<tr class="memdesc:acc92f46b0bdc12e59e750a31e199cbcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">wxWidgetsのイベント通知関数のラッパー  <a href="#acc92f46b0bdc12e59e750a31e199cbcf">[詳解]</a><br /></td></tr>
+<tr class="separator:acc92f46b0bdc12e59e750a31e199cbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e4e9ba50e9a973c35dd91d2fbf77d5"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a67e4e9ba50e9a973c35dd91d2fbf77d5"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classJaneCloneUiUtil.html#a67e4e9ba50e9a973c35dd91d2fbf77d5">QueueEventHelper</a> (const wxWindowID type, const wxWindowID id, const T &amp;message)</td></tr>
+<tr class="memdesc:a67e4e9ba50e9a973c35dd91d2fbf77d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">wxWidgetsのイベント通知関数のラッパー  <a href="#a67e4e9ba50e9a973c35dd91d2fbf77d5">[詳解]</a><br /></td></tr>
+<tr class="separator:a67e4e9ba50e9a973c35dd91d2fbf77d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f2a37bed951cf3b2cbafed8ddf9f8ab"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a2f2a37bed951cf3b2cbafed8ddf9f8ab"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classJaneCloneUiUtil.html#a2f2a37bed951cf3b2cbafed8ddf9f8ab">SendLoggingHelper</a> (const T &amp;message)</td></tr>
+<tr class="memdesc:a2f2a37bed951cf3b2cbafed8ddf9f8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">JaneCloneのログ処理のラッパー  <a href="#a2f2a37bed951cf3b2cbafed8ddf9f8ab">[詳解]</a><br /></td></tr>
+<tr class="separator:a2f2a37bed951cf3b2cbafed8ddf9f8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>JaneCloneのUI操作用クラス </p>
 </div><h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="acc92f46b0bdc12e59e750a31e199cbcf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JaneCloneUiUtil::QueueEventHelper </td>
+          <td>(</td>
+          <td class="paramtype">const wxWindowID&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wxWindowID&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wxWidgetsのイベント通知関数のラッパー </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td>wxWindowID type </td></tr>
+    <tr><td class="paramname">const</td><td>wxWindowID id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a67e4e9ba50e9a973c35dd91d2fbf77d5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JaneCloneUiUtil::QueueEventHelper </td>
+          <td>(</td>
+          <td class="paramtype">const wxWindowID&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wxWindowID&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wxWidgetsのイベント通知関数のラッパー </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td>wxWindowID type </td></tr>
+    <tr><td class="paramname">const</td><td>wxWindowID id </td></tr>
+    <tr><td class="paramname">const</td><td>T message</td></tr>
+    <tr><td class="paramname">const</td><td>wxWindowID type </td></tr>
+    <tr><td class="paramname">const</td><td>wxWindowID id </td></tr>
+    <tr><td class="paramname">const</td><td>T&amp; message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2f2a37bed951cf3b2cbafed8ddf9f8ab"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">template void JaneCloneUiUtil::SendLoggingHelper&lt; wxString &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>JaneCloneのログ処理のラッパー </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td>T message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="abf4a43ef040a1edbeced450763557443"></a>
 <div class="memitem">
 <div class="memproto">
@@ -154,7 +297,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2014年07月24日(木) 11時57分06秒作成 - JaneClone / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2014年07月26日(土) 14時08分01秒作成 - JaneClone / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

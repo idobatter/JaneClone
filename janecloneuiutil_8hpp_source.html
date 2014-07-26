@@ -115,26 +115,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;wx/imaglist.h&gt;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;datatype.hpp&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;enums.hpp&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;janecloneutil.hpp&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classJaneCloneUiUtil.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classJaneCloneUiUtil.html">JaneCloneUiUtil</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;     <span class="keywordtype">void</span> <span class="keyword">static</span> <a class="code" href="classJaneCloneUiUtil.html#abf4a43ef040a1edbeced450763557443">SetTreeCtrlCommonSetting</a>(wxTreeCtrl* treeCtrl, <span class="keyword">const</span> wxWindowID <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* JANECLONEUIUTIL_HPP_ */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="ttc" id="classJaneCloneUiUtil_html_abf4a43ef040a1edbeced450763557443"><div class="ttname"><a href="classJaneCloneUiUtil.html#abf4a43ef040a1edbeced450763557443">JaneCloneUiUtil::SetTreeCtrlCommonSetting</a></div><div class="ttdeci">static void SetTreeCtrlCommonSetting(wxTreeCtrl *treeCtrl, const wxWindowID id)</div><div class="ttdoc">wxTreeCtrlのインスタンスを受け取って共通の設定を行う </div><div class="ttdef"><b>Definition:</b> janecloneuiutil.cpp:25</div></div>
-<div class="ttc" id="classJaneCloneUiUtil_html"><div class="ttname"><a href="classJaneCloneUiUtil.html">JaneCloneUiUtil</a></div><div class="ttdoc">JaneCloneのUI操作用クラス </div><div class="ttdef"><b>Definition:</b> janecloneuiutil.hpp:34</div></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classJaneCloneUiUtil.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classJaneCloneUiUtil.html">JaneCloneUiUtil</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;     <span class="keywordtype">void</span> <span class="keyword">static</span> <a class="code" href="classJaneCloneUiUtil.html#abf4a43ef040a1edbeced450763557443">SetTreeCtrlCommonSetting</a>(wxTreeCtrl* treeCtrl, <span class="keyword">const</span> wxWindowID <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;     <span class="keywordtype">void</span> <span class="keyword">static</span> <a class="code" href="classJaneCloneUiUtil.html#acc92f46b0bdc12e59e750a31e199cbcf">QueueEventHelper</a>(<span class="keyword">const</span> wxWindowID type, <span class="keyword">const</span> wxWindowID <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;     <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;     <span class="keywordtype">void</span> <span class="keyword">static</span> <a class="code" href="classJaneCloneUiUtil.html#acc92f46b0bdc12e59e750a31e199cbcf">QueueEventHelper</a>(<span class="keyword">const</span> wxWindowID type, <span class="keyword">const</span> wxWindowID <span class="keywordtype">id</span>, <span class="keyword">const</span> T&amp; message);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;     <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;     <span class="keywordtype">void</span> <span class="keyword">static</span> <a class="code" href="classJaneCloneUiUtil.html#a2f2a37bed951cf3b2cbafed8ddf9f8ab">SendLoggingHelper</a>(<span class="keyword">const</span> T&amp; message);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* JANECLONEUIUTIL_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="ttc" id="classJaneCloneUiUtil_html_acc92f46b0bdc12e59e750a31e199cbcf"><div class="ttname"><a href="classJaneCloneUiUtil.html#acc92f46b0bdc12e59e750a31e199cbcf">JaneCloneUiUtil::QueueEventHelper</a></div><div class="ttdeci">static void QueueEventHelper(const wxWindowID type, const wxWindowID id)</div><div class="ttdoc">wxWidgetsのイベント通知関数のラッパー </div><div class="ttdef"><b>Definition:</b> janecloneuiutil.cpp:115</div></div>
+<div class="ttc" id="classJaneCloneUiUtil_html_a2f2a37bed951cf3b2cbafed8ddf9f8ab"><div class="ttname"><a href="classJaneCloneUiUtil.html#a2f2a37bed951cf3b2cbafed8ddf9f8ab">JaneCloneUiUtil::SendLoggingHelper</a></div><div class="ttdeci">static void SendLoggingHelper(const T &amp;message)</div><div class="ttdoc">JaneCloneのログ処理のラッパー </div><div class="ttdef"><b>Definition:</b> janecloneuiutil.cpp:155</div></div>
+<div class="ttc" id="classJaneCloneUiUtil_html_abf4a43ef040a1edbeced450763557443"><div class="ttname"><a href="classJaneCloneUiUtil.html#abf4a43ef040a1edbeced450763557443">JaneCloneUiUtil::SetTreeCtrlCommonSetting</a></div><div class="ttdeci">static void SetTreeCtrlCommonSetting(wxTreeCtrl *treeCtrl, const wxWindowID id)</div><div class="ttdoc">wxTreeCtrlのインスタンスを受け取って共通の設定を行う </div><div class="ttdef"><b>Definition:</b> janecloneuiutil.cpp:32</div></div>
+<div class="ttc" id="classJaneCloneUiUtil_html"><div class="ttname"><a href="classJaneCloneUiUtil.html">JaneCloneUiUtil</a></div><div class="ttdoc">JaneCloneのUI操作用クラス </div><div class="ttdef"><b>Definition:</b> janecloneuiutil.hpp:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2014年07月24日(木) 11時57分06秒作成 - JaneClone / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+2014年07月26日(土) 14時08分01秒作成 - JaneClone / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
